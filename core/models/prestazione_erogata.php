@@ -1,6 +1,5 @@
 <?php
-class PrestazioneErogata
-	{
+class PrestazioneErogata {
 	private $conn;
 	private $table_name = "prestazioni_erogate";
 	// proprietà di una prestazione erogata
@@ -8,24 +7,22 @@ class PrestazioneErogata
 	public $Tipologia;
 	public $Quantita;
 	// costruttore
-	public function __construct($db)
-		{
+	public function __construct($db) {
 		$this->conn = $db;
-		}
+	}
 
-	// READ Prestazione Erogata
-	function read()
-		{
+	// LEGGERE Prestazione Erogata
+	function read() {
 		// select all
-    $query = "SELECT a.Data, a.Tipologia, a.Quantita FROM " . $this->table_name . " a ";
+    $query = "SELECT a.Data, a.Tipologia, a.Quantita FROM " . $this->table_name . " a ORDER BY Data ASC";
 		$stmt = $this->conn->prepare($query);
 		// execute query
 		$stmt->execute();
 		return $stmt;
-		}
+	}
 
 	// CREARE Prestazione Erogata
-  function create(){
+  function create() {
     $query = "INSERT INTO " . $this->table_name . " SET Data=:data, Tipologia=:tipologia, Quantita=:quantita";
     $stmt = $this->conn->prepare($query);
     $this->Data = htmlspecialchars(strip_tags($this->Data));
@@ -43,11 +40,10 @@ class PrestazioneErogata
     }
 
     return false;
-
   }
 
 	// AGGIORNARE Prestazione Erogata
-  function update(){
+  function update() {
     $query = "UPDATE " . $this->table_name . " SET Tipologia = :tipologia, Quantita = :quantita  WHERE Data = :data";
     $stmt = $this->conn->prepare($query);
 		$this->Data = htmlspecialchars(strip_tags($this->Data));
@@ -67,8 +63,8 @@ class PrestazioneErogata
     return false;
   }
 
-	// CANCELLARE Prestazione Offerta
-  function delete(){
+	// CANCELLARE Prestazione Erogata
+  function delete() {
     $query = "DELETE FROM " . $this->table_name . " WHERE Data = ?";
     $stmt = $this->conn->prepare($query);
     $this->Data = htmlspecialchars(strip_tags($this->Data));
@@ -83,5 +79,6 @@ class PrestazioneErogata
 
   }
 
-	}
+}
+
 ?>

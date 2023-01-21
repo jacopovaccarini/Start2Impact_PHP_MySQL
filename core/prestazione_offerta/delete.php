@@ -6,25 +6,23 @@ header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-include_once '../config/database.php';
-include_once '../models/prestazione_offerta.php';
-
-$database = new Database();
-$db = $database->getConnection();
-
 $prestOfferta = new PrestazioneOfferta($db);
-
 $data = json_decode(file_get_contents("php://input"));
 
-$prestOfferta->Nome = $data->Nome;
-$prestOfferta->Tempo = $data->Tempo;
+if (!empty($data->Nome)) {
+  $prestOfferta->Nome = $data->Nome;
 
-if($prestOfferta->update()){
+  if ($prestOfferta->delete()) {
     http_response_code(200);
-    echo json_encode(array("risposta" => "Prestazione offerta aggiornata"));
-}else{
+    echo json_encode(array("message" => "La prestazione offerta e' stata eliminata"));
+  } else {
     //503 service unavailable
     http_response_code(503);
-    echo json_encode(array("risposta" => "Impossibile aggiornare la prestazione offerta"));
+    echo json_encode(array("message" => "Impossibile eliminare la prestazione offerta."));
+  }
+} else {
+  //400 bad request
+  http_response_code(400);
+  echo json_encode(array("message" => "Impossibile cancellare la prestazione offerta perchè i dati sono incompleti."));
 }
 ?>

@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira:wght@300&display=swap");
+*, *::after, *::before {
+  box-sizing: border-box;
+  font-family: "Saira", sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  background-color: #FFFFFF;
+  color: #222222;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+nav a {
+  width: 33%;
+  background-color: #FFFFFF;
+  border: 1px solid #22b14c;
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin: 1rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+nav a:hover {
+  background-color: #b5e61d;
+}
+
+nav a:active {
+  color: #222222;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 85%;
+  width: 90%;
+  margin: 1rem;
+  padding: 2rem;
+  background-color: #d3d3d3;
+  border-radius: 20px;
+}
+
+.principale, .secondario {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.secondario {
+  height: 45%;
+  margin-top: 2rem;
+}
+
+.tempo_risparmiato,
+.form_data,
+.form_tipologia,
+.table_prestazioni_offerte,
+.table_prestazioni_erogate,
+.table_prestazioni_unite,
+.form_prestazione_offerta,
+.form_prestazione_erogata,
+.table_ricerca {
+  box-shadow: 2.5px 5px 25px #0004, 0 1px 6px #0006;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  height: 100%;
+  width: 33%;
+}
+
+.tempo_risparmiato h1,
+.form_data h1,
+.form_tipologia h1,
+.table_prestazioni_offerte h1,
+.table_prestazioni_erogate h1,
+.table_prestazioni_unite h1,
+.form_prestazione_offerta h1,
+.form_prestazione_erogata h1,
+.table_ricerca h1 {
+  text-align: center;
+  color: #22b14c;
+  margin-top: 0;
+}
+
+.tempo_risparmiato p,
+.form_data p,
+.form_tipologia p,
+.table_prestazioni_offerte p,
+.table_prestazioni_erogate p,
+.table_prestazioni_unite p,
+.form_prestazione_offerta p,
+.form_prestazione_erogata p,
+.table_ricerca p {
+  font-size: 1.5rem;
+}
+
+.tempo_risparmiato:first-child,
+.form_data:first-child,
+.form_tipologia:first-child,
+.table_prestazioni_offerte:first-child,
+.table_prestazioni_erogate:first-child,
+.table_prestazioni_unite:first-child,
+.form_prestazione_offerta:first-child,
+.form_prestazione_erogata:first-child,
+.table_ricerca:first-child {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+.tempo_risparmiato:last-child,
+.form_data:last-child,
+.form_tipologia:last-child,
+.table_prestazioni_offerte:last-child,
+.table_prestazioni_erogate:last-child,
+.table_prestazioni_unite:last-child,
+.form_prestazione_offerta:last-child,
+.form_prestazione_erogata:last-child,
+.table_ricerca:last-child {
+  margin-left: 1rem;
+  margin-right: 0;
+}
+
+.table_prestazioni_offerte,
+.table_prestazioni_erogate,
+.table_prestazioni_unite {
+  padding-bottom: 2rem;
+}
+
+.table_prestazioni_offerte:last-child,
+.table_prestazioni_erogate:last-child,
+.table_prestazioni_unite:last-child {
+  width: 80%;
+}
+
+.table_prestazioni_offerte .table,
+.table_prestazioni_erogate .table,
+.table_prestazioni_unite .table {
+  overflow: scroll;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.table_prestazioni_offerte .prima_colonna {
+  width: 40%;
+}
+
+.table_prestazioni_offerte .seconda_colonna {
+  width: 60%;
+}
+
+.table_prestazioni_erogate .prima_colonna {
+  width: 35%;
+}
+
+.table_prestazioni_erogate .seconda_colonna {
+  width: 40%;
+}
+
+.table_prestazioni_erogate .terza_colonna {
+  width: 25%;
+}
+
+.table_prestazioni_unite .prima_colonna {
+  width: 15%;
+}
+
+.table_prestazioni_unite .seconda_colonna {
+  width: 20%;
+}
+
+.table_prestazioni_unite .terza_colonna {
+  width: 13%;
+}
+
+.table_prestazioni_unite .quarta_colonna {
+  width: 26%;
+}
+
+.table_prestazioni_unite .quinta_colonna {
+  width: 26%;
+}
+
+.table_ricerca {
+  width: 100%;
+}
+
+.table_ricerca .prima_colonna {
+  width: 15%;
+}
+
+.table_ricerca .seconda_colonna {
+  width: 20%;
+}
+
+.table_ricerca .terza_colonna {
+  width: 13%;
+}
+
+.table_ricerca .quarta_colonna {
+  width: 26%;
+}
+
+.table_ricerca .quinta_colonna {
+  width: 26%;
+}
+
+.table_ricerca:first-child {
+  margin-left: 0;
+}
+
+.table_ricerca .table {
+  overflow: scroll;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.table_ricerca p {
+  margin-bottom: 0;
+}
+
+.form_prestazione_offerta,
+.form_prestazione_erogata {
+  width: 50%;
+}
+
+.form_prestazione_offerta:first-child,
+.form_prestazione_erogata:first-child {
+  margin-right: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  width: 80%;
+}
+
+form button {
+  box-shadow: 2.5px 5px 25px #0004, 0 1px 6px #0006;
+  background-color: #FFFFFF;
+  border: 1px solid #22b14c;
+  border-radius: 10px;
+  margin-top: 1rem;
+  width: 100%;
+  height: 3rem;
+  font-size: 1.5rem;
+}
+
+form button:hover {
+  box-shadow: inset 0 2px 25px #0006;
+  background-color: #b5e61d;
+  cursor: pointer;
+}
+
+form button:active {
+  box-shadow: inset 0 2px 50px #0008;
+}
+
+form input, form select {
+  width: 50%;
+  font-size: 1.2rem;
+}
+
+.input_data_iniziale,
+.input_data_finale,
+.input_tipologia,
+.input_nome,
+.input_tempo,
+.input_data,
+.input_quantita {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.input_data_iniziale p,
+.input_data_finale p,
+.input_tipologia p,
+.input_nome p,
+.input_tempo p,
+.input_data p,
+.input_quantita p {
+  padding-right: 1rem;
+}
+
+table {
+  border: 1px solid;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: center;
+  border: 1px solid;
+  padding: 0.2rem;
+}
+
+.no_border {
+  border: none;
+}
+
+.no_border th {
+  border: none;
+}

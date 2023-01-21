@@ -1,7 +1,7 @@
 <?php
 class Database
 	{
-	// credenziali
+	// credenziali database
 	private $host = "127.0.0.1";
 	private $db_name = "Bonny";
 	private $username = "root";
