@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira:wght@300&display=swap');
 
-$primary: #d3d3d3; //lightgrey
-$secondary: #FFFFFF; //white
-$border: #22b14c; //green
-$button_hover: #b5e61d; //lemongreen
+$primary: #22b14c; //green
+$secondary: #d3d3d3; //lightgrey
+$third: #FFFFFF; //white
+$hover: #b5e61d; //lemongreen
 $text: #222222; //darkgrey
 
 *, *::after, *::before {
@@ -21,38 +21,39 @@ html {
   display: flex;
   justify-content: center;
   height: 100%;
-  background-color: $secondary;
+  background-color: $third;
   color: $text;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 100%;
+  margin: 0;
 }
 
 nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  width: 90%;
+  width: 100%;
+  background-color: $primary;
 
   a {
-    width: 33%;
-    background-color: $secondary;
-    border: 1px solid $border;
-    border-radius: 10px;
-    padding: 0.5rem;
-    margin: 1rem;
+    width: 100%;
+    background-color: $primary;
+    padding: 1.5rem;
+    margin: 0;
     text-align: center;
     text-decoration: none;
     font-size: 2rem;
+    color: white;
 
     &:hover {
-      background-color: $button_hover;
+      background-color: $hover;
+      color: $primary;
     }
 
     &:active {
@@ -70,7 +71,7 @@ nav {
   width: 90%;
   margin: 1rem;
   padding: 2rem;
-  background-color: $primary;
+  background-color: $secondary;
   border-radius: 20px;
 }
 
@@ -104,14 +105,14 @@ nav {
   align-items: center;
   margin: 1rem;
   padding: 1rem;
-  background-color: $secondary;
+  background-color: $third;
   border-radius: 20px;
   height: 100%;
   width: 33%;
 
   h1 {
     text-align: center;
-    color: $border;
+    color: $primary;
     margin-top: 0;
   }
 
@@ -234,8 +235,20 @@ nav {
 .form_prestazione_erogata {
   width: 50%;
 
-  &:first-child {
-    margin-right: 2rem;
+  p {
+    font-size: 1.2rem;
+  }
+
+  input, select {
+    font-size: 1.2rem;
+  }
+
+  hr {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    height: 3px;
+    width: 100%;
+    background-color: $primary;
   }
 }
 
@@ -247,8 +260,8 @@ form {
 
   button {
     box-shadow: 2.5px 5px 25px #0004, 0 1px 6px #0006;
-    background-color: $secondary;
-    border: 1px solid $border;
+    background-color: $third;
+    border: 1px solid $primary;
     border-radius: 10px;
     margin-top: 1rem;
     width: 100%;
@@ -257,7 +270,7 @@ form {
 
     &:hover {
       box-shadow: inset 0 2px 25px #0006;
-      background-color: $button_hover;
+      background-color: $hover;
       cursor: pointer;
     }
 

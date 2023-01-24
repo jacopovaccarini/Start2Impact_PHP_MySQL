@@ -63,7 +63,9 @@ class PrestazioneOfferta {
     $query = "DELETE FROM " . $this->table_name . " WHERE Nome = ?";
     $stmt = $this->conn->prepare($query);
     $this->Nome = htmlspecialchars(strip_tags($this->Nome));
-    $stmt->bindParam(1, $this->Nome);
+
+		// binding
+		$stmt->bindParam(1, $this->Nome);
 
     // execute query
     if($stmt->execute()){

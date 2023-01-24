@@ -15,6 +15,21 @@
         </div>
         <button type="submit" name="submit" value="Submit">Crea</button>
       </form>
+      <hr>
+      <h1>Cancellazione</h1>
+      <form method="post" action="/delete_po">
+        <div class="input_nome">
+          <p>Nome</p>
+          <select type="text" name="nome" required>
+          <?php foreach ($offerte as $offerta) : ?>
+            <option>
+              <?= $offerta->Nome; ?>
+            </option>
+          <?php endforeach; ?>
+          </select>
+        </div>
+        <button type="submit" name="submit" value="Submit">Cancella</button>
+      </form>
     </div>
 
     <div class="form_prestazione_erogata">
@@ -39,6 +54,31 @@
           <input type="number" name="quantita" size="40" required>
         </div>
         <button type="submit" name="submit" value="Submit">Crea</button>
+      </form>
+      <hr>
+      <h1>Cancellazione</h1>
+      <form method="post" action="/delete_pe">
+        <div class="input_data">
+          <p>Data</p>
+          <select type="text" name="data" required>
+          <?php foreach ($erogate as $erogata) : ?>
+            <option>
+              <?= $erogata->Data; ?>
+            </option>
+          <?php endforeach; ?>
+          </select>
+        </div>
+        <div class="input_tipologia">
+          <p>Tipologia</p>
+          <select type="text" name="tipologia" required>
+          <?php foreach ($erogate as $erogata) : ?>
+            <option>
+              <?= $erogata->Tipologia; ?>
+            </option>
+          <?php endforeach; ?>
+          </select>
+        </div>
+        <button type="submit" name="submit" value="Submit">Cancella</button>
       </form>
     </div>
   </div>

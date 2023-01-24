@@ -24,11 +24,8 @@ class PrestazioneUnita {
 	  $stmt->bindParam(":data_finale", $this->Data_Finale);
 
 	  // execute the query
-	  if ($stmt->execute()) {
-	      return $stmt;
-	  }
-
-	  return false;
+	  $stmt->execute();
+	  return $stmt;
 	}
 
 	// FILTRARE TIPOLOGIA Prestazione Unione
@@ -41,11 +38,8 @@ class PrestazioneUnita {
 	  $stmt->bindParam(":tipologia", $this->Tipologia);
 
 	  // execute the query
-	  if ($stmt->execute()) {
-	      return $stmt;
-	  }
-
-	  return false;
+	  $stmt->execute();
+	  return $stmt;
 	}
 
 	// FILTRARE DATA e TIPOLOGIA Prestazione Unione
@@ -62,11 +56,8 @@ class PrestazioneUnita {
 		$stmt->bindParam(":tipologia", $this->Tipologia);
 
 	  // execute the query
-	  if ($stmt->execute()) {
-	      return $stmt;
-	  }
-
-	  return false;
+	  $stmt->execute();
+	  return $stmt;
 	}
 
 	// TEMPO RISPARMIATO Prestazione Unione
@@ -75,17 +66,15 @@ class PrestazioneUnita {
 	  $stmt = $this->conn->prepare($query);
 
 		// execute the query
-	  if ($stmt->execute()) {
-	      return $stmt;
-	  }
-
-	  return false;
+	  $stmt->execute();
+	  return $stmt;
 	}
 
 	// UNISCI TABELLE Prestazione Unione
 	function join_table() {
 	  $query = "SELECT *, Tempo * Quantita AS Prodotto FROM " . $this->table_name . " INNER JOIN " . $this->join_name . " ON " . $this->table_name . ".Nome = " . $this->join_name . ".Tipologia ORDER BY Data ASC";
 	  $stmt = $this->conn->prepare($query);
+
 		// execute query
 		$stmt->execute();
 		return $stmt;

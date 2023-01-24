@@ -65,10 +65,14 @@ class PrestazioneErogata {
 
 	// CANCELLARE Prestazione Erogata
   function delete() {
-    $query = "DELETE FROM " . $this->table_name . " WHERE Data = ?";
+    $query = "DELETE FROM " . $this->table_name . " WHERE Data = :data AND Tipologia = :tipologia";
     $stmt = $this->conn->prepare($query);
     $this->Data = htmlspecialchars(strip_tags($this->Data));
-    $stmt->bindParam(1, $this->Data);
+		$this->Tipologia = htmlspecialchars(strip_tags($this->Tipologia));
+
+		// binding
+		$stmt->bindParam(":data", $this->Data);
+		$stmt->bindParam(":tipologia", $this->Tipologia);
 
     // execute query
     if($stmt->execute()){
