@@ -85,6 +85,8 @@
 
 <p>Le API create consentono l’inserimento, la modifica e la cancellazione di una tipologia di prestazione offerta e di una prestazione erogata. Inoltre permettono la visualizzazione del tempo risparmiato e di filtrare per data e per tipologia di prestazione erogata.</p>
 
+<p align="right">(<a href="#top">torna all'inizio</a>)</p>
+
 
 ### API Prestazioni Offerte
 
@@ -119,6 +121,8 @@
 </code>
 
 [![Schermata Postman][screenshot-delete_po]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+
+<p align="right">(<a href="#top">torna all'inizio</a>)</p>
 
 
 ### API Prestazioni Erogate
@@ -156,6 +160,8 @@
 </code>
 
 [![Schermata Postman][screenshot-delete_pe]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+
+<p align="right">(<a href="#top">torna all'inizio</a>)</p>
 
 
 ### Altre API
@@ -211,7 +217,7 @@
 
 [![Schermata applicazione][screenshot-progetto5]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
 
-
+<p align="right">(<a href="#top">torna all'inizio</a>)</p>
 
 
 <!-- ROADMAP -->
@@ -257,15 +263,15 @@ Collegamento al progetto: [https://github.com/jacopovaccarini/Start2Impact_VueJs
 [issues-URL]: https://github.com/jacopovaccarini/Start2Impact_PHP_MySQL/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/jacopo-vaccarini
-[screenshot-create_po]: public/img/1.CrearePrestazioneOfferta.png
-[screenshot-update_po]: public/img/2.AggiornarePrestazioneOfferta.png
-[screenshot-delete_po]: public/img/3.CancellarePrestazioneOfferta.png
-[screenshot-create_pe]: public/img/4.CrearePrestazioneErogata.png
-[screenshot-update_pe]: public/img/5.AggiornarePrestazioneErogata.png
-[screenshot-delete_pe]: public/img/6.CancellarePrestazioneErogata.png
-[screenshot-filter_date]: public/img/7.FiltrareData.png
-[screenshot-filter_type]: public/img/8.FiltrareData.png
-[screenshot-time_saved]: public/img/9.TempoRisparmiato.png
+[screenshot-create_po]: public/img/CrearePrestazioneOfferta.png
+[screenshot-update_po]: public/img/AggiornarePrestazioneOfferta.png
+[screenshot-delete_po]: public/img/CancellarePrestazioneOfferta.png
+[screenshot-create_pe]: public/img/CrearePrestazioneErogata.png
+[screenshot-update_pe]: public/img/AggiornarePrestazioneErogata.png
+[screenshot-delete_pe]: public/img/CancellarePrestazioneErogata.png
+[screenshot-filter_date]: public/img/FiltrareData.png
+[screenshot-filter_type]: public/img/FiltrareData.png
+[screenshot-time_saved]: public/img/TempoRisparmiato.png
 [screenshot-progetto1]: public/img/screenshot1.png
 [screenshot-progetto2]: public/img/screenshot2.png
 [screenshot-progetto3]: public/img/screenshot3.png
