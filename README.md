@@ -199,7 +199,7 @@
 
 
 <!-- ESEMPI DI UTILIZZO -->
-##EXTRA: Frontend
+## EXTRA: Frontend
 
 <p> In aggiunta, anche se il progetto non lo richiedeva, è stato creato un frontend costituito da tre pagine.
 
