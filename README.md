@@ -64,8 +64,6 @@
 <!-- SUL PROGETTO -->
 ## Informazioni sul progetto
 
-[![Schermata applicazione][screenshot-progetto1]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
-
 <p>Questo progetto consiste nella creazione di API JSON RESTful per l’implementazione di una dashboard che visualizzi il tempo risparmiato dai cittadini nella fruizione dei servizi di una startup. La startup Bonny è nata per rendere più accessibili e comprensibili i servizi e i bonus statali ai cittadini.</p>
 
 <p align="right">(<a href="#top">torna all'inizio</a>)</p>
