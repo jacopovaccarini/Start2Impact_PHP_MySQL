@@ -99,7 +99,7 @@
 }
 </code>
 
-[![Schermata Postman][screenshot-create_po]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+[![Schermata Postman][screenshot-createpo]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
 
 <p>Per la MODIFICA di una nuova prestazione offerta deve essere utilizzato il seguente URL: http://localhost:8888/update_po</p>
 <p>Con il seguente Body in JSON:</p>
@@ -110,7 +110,7 @@
 }
 </code>
 
-[![Schermata Postman][screenshot-update_po]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+[![Schermata Postman][screenshot-updatepo]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
 
 <p>Per la CANCELLAZIONE di una nuova prestazione offerta deve essere utilizzato il seguente URL: http://localhost:8888/delete_po</p>
 <p>Con il seguente Body in JSON:</p>
@@ -120,7 +120,7 @@
 }
 </code>
 
-[![Schermata Postman][screenshot-delete_po]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+[![Schermata Postman][screenshot-deletepo]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
 
 <p align="right">(<a href="#top">torna all'inizio</a>)</p>
 
@@ -136,7 +136,7 @@
 }
 </code>
 
-[![Schermata Postman][screenshot-create_pe]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+[![Schermata Postman][screenshot-createpe]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
 
 <p>Per la MODIFICA di una nuova prestazione erogata deve essere utilizzato il seguente URL: http://localhost:8888/update_pe</p>
 <p>Con il seguente Body in JSON:</p>
@@ -148,7 +148,7 @@
 }
 </code>
 
-[![Schermata Postman][screenshot-update_pe]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+[![Schermata Postman][screenshot-updatepe]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
 
 <p>Per la CANCELLAZIONE di una nuova prestazione erogata deve essere utilizzato il seguente URL: http://localhost:8888/delete_pe</p>
 <p>Con il seguente Body in JSON:</p>
@@ -159,7 +159,7 @@
 }
 </code>
 
-[![Schermata Postman][screenshot-delete_pe]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+[![Schermata Postman][screenshot-deletepe]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
 
 <p align="right">(<a href="#top">torna all'inizio</a>)</p>
 
@@ -175,7 +175,7 @@
 </code>
 <p>Come risposta avremo l’elenco delle prestazioni erogate con data tra Data_Iniziale e Data_Finale e il tempo risparmiato con quelle prestazioni erogate.</p>
 
-[![Schermata Postman][screenshot-filter_date]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+[![Schermata Postman][screenshot-filterdate]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
 
 <p>Per FILTRARE in base alla TIPOLOGIA delle prestazioni erogate deve essere utilizzato il seguente URL: http://localhost:8888/filter_type</p>
 <p>Con il seguente Body in JSON:</p>
@@ -186,13 +186,13 @@
 </code>
 <p>Come risposta avremo l’elenco delle prestazioni erogate di quella tipologia e il tempo risparmiato con quelle prestazioni erogate.</p>
 
-[![Schermata Postman][screenshot-filter_type]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+[![Schermata Postman][screenshot-filtertype]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
 
 <p>Per visualizzare il TEMPO RISPARMIATO TOTALE delle prestazioni erogate deve essere utilizzato il seguente URL: http://localhost:8888/time_saved</p>
 <p>Con il Body vuoto</p>
 <p>Come risposta avremo direttamente il tempo risparmiato con tutte le prestazioni erogate.</p>
 
-[![Schermata Postman][screenshot-time_saved]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+[![Schermata Postman][screenshot-timesaved]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
 
 <p align="right">(<a href="#top">torna all'inizio</a>)</p>
 
@@ -263,15 +263,15 @@ Collegamento al progetto: [https://github.com/jacopovaccarini/Start2Impact_VueJs
 [issues-URL]: https://github.com/jacopovaccarini/Start2Impact_PHP_MySQL/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/jacopo-vaccarini
-[screenshot-create_po]: public/img/CrearePrestazioneOfferta.png
-[screenshot-update_po]: public/img/AggiornarePrestazioneOfferta.png
-[screenshot-delete_po]: public/img/CancellarePrestazioneOfferta.png
-[screenshot-create_pe]: public/img/CrearePrestazioneErogata.png
-[screenshot-update_pe]: public/img/AggiornarePrestazioneErogata.png
-[screenshot-delete_pe]: public/img/CancellarePrestazioneErogata.png
-[screenshot-filter_date]: public/img/FiltrareData.png
-[screenshot-filter_type]: public/img/FiltrareData.png
-[screenshot-time_saved]: public/img/TempoRisparmiato.png
+[screenshot-createpo]: public/img/CrearePrestazioneOfferta.png
+[screenshot-updatepo]: public/img/AggiornarePrestazioneOfferta.png
+[screenshot-deletepo]: public/img/CancellarePrestazioneOfferta.png
+[screenshot-createpe]: public/img/CrearePrestazioneErogata.png
+[screenshot-updatepe]: public/img/AggiornarePrestazioneErogata.png
+[screenshot-deletepe]: public/img/CancellarePrestazioneErogata.png
+[screenshot-filterdate]: public/img/FiltrareData.png
+[screenshot-filtertype]: public/img/FiltrareData.png
+[screenshot-timesaved]: public/img/TempoRisparmiato.png
 [screenshot-progetto1]: public/img/screenshot1.png
 [screenshot-progetto2]: public/img/screenshot2.png
 [screenshot-progetto3]: public/img/screenshot3.png
