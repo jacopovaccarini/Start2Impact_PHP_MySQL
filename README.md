@@ -92,8 +92,7 @@
 
 <p>Per l’INSERIMENTO di una nuova prestazione offerta deve essere utilizzato il seguente URL: http://localhost:8888/create_po</p>
 <p>Con il seguente Body in JSON:</p>
-<code>
-{
+<code>{
     "Nome": "Bonus22",
     "Tempo": 30
 }
@@ -103,8 +102,7 @@
 
 <p>Per la MODIFICA di una nuova prestazione offerta deve essere utilizzato il seguente URL: http://localhost:8888/update_po</p>
 <p>Con il seguente Body in JSON:</p>
-<code>
-{
+<code>{
     "Nome": "Bonus cultura",
     "Tempo": 40
 }
@@ -114,8 +112,7 @@
 
 <p>Per la CANCELLAZIONE di una nuova prestazione offerta deve essere utilizzato il seguente URL: http://localhost:8888/delete_po</p>
 <p>Con il seguente Body in JSON:</p>
-<code>
-{
+<code>{
     "Nome": "Bonus22 «
 }
 </code>
@@ -129,7 +126,7 @@
 
 <p>Per l’INSERIMENTO di una nuova prestazione erogata deve essere utilizzato il seguente URL: http://localhost:8888/create_pe</p>
 <p>Con il seguente Body in JSON:</p>
-{
+<code>{
     "Data": "2023-01-21",
     "Tipologia": "Bonus20",
     "Quantita": 2
@@ -140,8 +137,7 @@
 
 <p>Per la MODIFICA di una nuova prestazione erogata deve essere utilizzato il seguente URL: http://localhost:8888/update_pe</p>
 <p>Con il seguente Body in JSON:</p>
-<code>
-{
+<code>{
     "Data": "2023-01-21",
     "Tipologia": "Bonus20",
     "Quantita": 2
@@ -152,8 +148,7 @@
 
 <p>Per la CANCELLAZIONE di una nuova prestazione erogata deve essere utilizzato il seguente URL: http://localhost:8888/delete_pe</p>
 <p>Con il seguente Body in JSON:</p>
-<code>
-{
+<code>{
     "Data": "2023-01-09",
     "Tipologia": "Bonus cultura"
 }
@@ -168,7 +163,7 @@
 
 <p>Per FILTRARE in base alla DATA delle prestazioni erogate deve essere utilizzato il seguente URL: http://localhost:8888/filter_date</p>
 <p>Con il seguente Body in JSON:</p>
-{
+<code>{
     "Data_Iniziale": "2023-01-10",
     "Data_Finale": "2023-01-21"
 }
@@ -179,8 +174,7 @@
 
 <p>Per FILTRARE in base alla TIPOLOGIA delle prestazioni erogate deve essere utilizzato il seguente URL: http://localhost:8888/filter_type</p>
 <p>Con il seguente Body in JSON:</p>
-<code>
-{
+<code>{
     "Tipologia": "Bonus10"
 }
 </code>
@@ -223,10 +217,9 @@
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Implementare la possibilità di inserire i nomi dei giocatori
-- [X] Implementare la modalità singolo giocatore contro il computer
-- [X] Implementare la possibilità di scegliere la difficoltà nella modalità contro il computer
-- [ ] Implementare la modalità due giocatori da remoto
+- [x] Implementare il frontend dell'applicazione
+- [ ] Implementare nel frontend la possibilità di filtrare per data e tipologia contemporaneamente
+- [ ] Implementare nel frontend la possibilità di modificare le prestazioni offerte ed erogate
 
 Andare sulla pagina [issues](https://github.com/jacopovaccarini/Start2Impact_PHP_MySQL/issues) per un elenco completo delle funzionalità proposte (e dei problemi noti).
 
