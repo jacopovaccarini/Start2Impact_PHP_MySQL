@@ -99,7 +99,9 @@
 </code>
 <br></br>
 
-[![Schermata Postman][screenshot-createpo]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+<div align="center">
+  [![Schermata Postman][screenshot-createpo]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+</div>
 
 <p>Per la MODIFICA di una nuova prestazione offerta deve essere utilizzato il seguente URL: http://localhost:8888/update_po</p>
 <p>Con il seguente Body in JSON:</p>
