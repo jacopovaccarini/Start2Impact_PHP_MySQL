@@ -90,7 +90,8 @@
 
 ### API Prestazioni Offerte
 
-* <p>Per l’INSERIMENTO di una nuova prestazione offerta deve essere utilizzato il seguente URL: http://localhost:8888/create_po</p>
+* <div>
+<p>Per l’INSERIMENTO di una nuova prestazione offerta deve essere utilizzato il seguente URL: http://localhost:8888/create_po</p>
 <p>Con il seguente Body in JSON:</p>
 <code>{
     "Nome": "Bonus22",
@@ -99,7 +100,7 @@
 </code>
 
 [![Schermata Postman][screenshot-createpo]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
-
+</div>
 <p>Per la MODIFICA di una nuova prestazione offerta deve essere utilizzato il seguente URL: http://localhost:8888/update_po</p>
 <p>Con il seguente Body in JSON:</p>
 <code>{
