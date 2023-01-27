@@ -91,7 +91,7 @@
 ### API Prestazioni Offerte
 
 <p>Per l’INSERIMENTO di una nuova prestazione offerta deve essere utilizzato il seguente URL: http://localhost:8888/create_po</p>
-<p margin-bottom: 0>Con il seguente Body in JSON:</p>
+<p style="margin-bottom:0">Con il seguente Body in JSON:</p>
 <code>{
     "Nome": "Bonus22",
     "Tempo": 30
