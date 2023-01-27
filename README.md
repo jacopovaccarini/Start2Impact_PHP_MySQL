@@ -97,7 +97,7 @@
     "Tempo": 30
 }
 </code>
-
+<br>
 [![Schermata Postman][screenshot-createpo]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
 
 <p>Per la MODIFICA di una nuova prestazione offerta deve essere utilizzato il seguente URL: http://localhost:8888/update_po</p>
