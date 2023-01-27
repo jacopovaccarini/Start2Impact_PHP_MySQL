@@ -241,7 +241,7 @@ Collegamento al progetto: [https://github.com/jacopovaccarini/Start2Impact_VueJs
 <!-- RINGRAZIAMENTI -->
 ## Ringraziamenti
 
-* [sweetalert2](https://sweetalert2.github.io/)
+* [MySQL](https://www.mysql.com/)
 
 <p align="right">(<a href="#top">torna all'inizio</a>)</p>
 
