@@ -111,6 +111,7 @@
 
 [![Schermata Postman][screenshot-updatepo]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
 
+
 <p>Per la CANCELLAZIONE di una nuova prestazione offerta deve essere utilizzato il seguente URL: http://localhost:8888/delete_po</p>
 <p>Con il seguente Body in JSON:</p>
 <code>{
@@ -136,6 +137,7 @@
 
 [![Schermata Postman][screenshot-createpe]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
 
+
 <p>Per la MODIFICA di una nuova prestazione erogata deve essere utilizzato il seguente URL: http://localhost:8888/update_pe</p>
 <p>Con il seguente Body in JSON:</p>
 <code>{
@@ -146,6 +148,7 @@
 </code>
 
 [![Schermata Postman][screenshot-updatepe]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+
 
 <p>Per la CANCELLAZIONE di una nuova prestazione erogata deve essere utilizzato il seguente URL: http://localhost:8888/delete_pe</p>
 <p>Con il seguente Body in JSON:</p>
@@ -173,6 +176,7 @@
 
 [![Schermata Postman][screenshot-filterdate]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
 
+
 <p>Per FILTRARE in base alla TIPOLOGIA delle prestazioni erogate deve essere utilizzato il seguente URL: http://localhost:8888/filter_type</p>
 <p>Con il seguente Body in JSON:</p>
 <code>{
@@ -182,6 +186,20 @@
 <p>Come risposta avremo l’elenco delle prestazioni erogate di quella tipologia e il tempo risparmiato con quelle prestazioni erogate.</p>
 
 [![Schermata Postman][screenshot-filtertype]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+
+
+<p>Per FILTRARE in base alla DATA e alla TIPOLOGIA delle prestazioni erogate deve essere utilizzato il seguente URL: http://localhost:8888/filter_date_type</p>
+<p>Con il seguente Body in JSON:</p>
+<code>{
+    "Data_Iniziale": "2023-01-19",
+    "Data_Finale": "2023-01-21",
+    "Tipologia": "Bonus20"
+}
+</code>
+<p>Come risposta avremo l’elenco delle prestazioni erogate di quella tipologia con data tra Data_Iniziale e Data_Finale e il tempo risparmiato con quelle prestazioni erogate.</p>
+
+[![Schermata Postman][screenshot-filterdatetype]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+
 
 <p>Per visualizzare il TEMPO RISPARMIATO TOTALE delle prestazioni erogate deve essere utilizzato il seguente URL: http://localhost:8888/time_saved</p>
 <p>Con il Body vuoto</p>
