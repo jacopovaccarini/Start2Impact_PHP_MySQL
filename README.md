@@ -83,7 +83,7 @@
 <!-- ESEMPI DI UTILIZZO -->
 ## Come usare le API
 
-<p>Le API create consentono l’inserimento, la modifica e la cancellazione di una tipologia di prestazione offerta e di una prestazione erogata. Inoltre permettono la visualizzazione del tempo risparmiato e di filtrare per data e per tipologia di prestazione erogata.</p>
+<p>Le API create consentono l’inserimento, la modifica e la cancellazione di una tipologia di prestazione offerta e di una prestazione erogata. Inoltre permettono la visualizzazione del tempo risparmiato e di filtrare per data e/o per tipologia di prestazione erogata.</p>
 
 <p align="right">(<a href="#top">torna all'inizio</a>)</p>
 
