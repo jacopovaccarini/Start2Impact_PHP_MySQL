@@ -264,7 +264,8 @@ Collegamento al progetto: [https://github.com/jacopovaccarini/Start2Impact_PHP_M
 [screenshot-updatepe]: public/img/AggiornarePrestazioneErogata.png
 [screenshot-deletepe]: public/img/CancellarePrestazioneErogata.png
 [screenshot-filterdate]: public/img/FiltrareData.png
-[screenshot-filtertype]: public/img/FiltrareData.png
+[screenshot-filtertype]: public/img/FiltrareTipologia.png
+[screenshot-filterdatetype]: public/img/FiltrareDataTipologia.png
 [screenshot-timesaved]: public/img/TempoRisparmiato.png
 [screenshot-progetto1]: public/img/screenshot1.png
 [screenshot-progetto2]: public/img/screenshot2.png
