@@ -251,7 +251,7 @@ Andare sulla pagina [issues](https://github.com/jacopovaccarini/Start2Impact_PHP
 
 Jacopo Vaccarini - [info@jacopovaccarini.it](mailto:info@jacopovaccarini.it)
 
-Collegamento al progetto: [https://github.com/jacopovaccarini/Start2Impact_PHP_MySQL](https://github.com/jacopovaccarini/Start2Impact_PHP_MySQL)
+Collegamento al progetto: [https://progettophpmysql.jacopovaccarini.it/](https://progettophpmysql.jacopovaccarini.it/)
 
 <p align="right">(<a href="#top">torna all'inizio</a>)</p>
 
