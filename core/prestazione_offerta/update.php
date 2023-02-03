@@ -17,7 +17,7 @@ if (!empty($data->Nome) && !empty($data->Tempo)) {
     http_response_code(200);
     echo json_encode(array("message" => "Prestazione offerta aggiornata."));
   } else {
-    //503 service unavailable
+    //503 servizio non disponibile
     http_response_code(503);
     echo json_encode(array("message" => "Impossibile aggiornare la prestazione offerta."));
   }

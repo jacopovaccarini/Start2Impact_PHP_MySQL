@@ -23,7 +23,7 @@ class PrestazioneUnita {
 	  $stmt->bindParam(":data_iniziale", $this->Data_Iniziale);
 	  $stmt->bindParam(":data_finale", $this->Data_Finale);
 
-	  // execute the query
+	  // execute query
 	  $stmt->execute();
 	  return $stmt;
 	}
@@ -55,7 +55,7 @@ class PrestazioneUnita {
 	  $stmt->bindParam(":data_finale", $this->Data_Finale);
 		$stmt->bindParam(":tipologia", $this->Tipologia);
 
-	  // execute the query
+	  // execute query
 	  $stmt->execute();
 	  return $stmt;
 	}
@@ -65,7 +65,7 @@ class PrestazioneUnita {
 	  $query = "SELECT Tempo * Quantita AS Prodotto FROM " . $this->table_name . " INNER JOIN " . $this->join_name . " ON " . $this->table_name . ".Nome = " . $this->join_name . ".Tipologia";
 	  $stmt = $this->conn->prepare($query);
 
-		// execute the query
+		// execute query
 	  $stmt->execute();
 	  return $stmt;
 	}

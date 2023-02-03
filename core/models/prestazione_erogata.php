@@ -55,7 +55,7 @@ class PrestazioneErogata {
     $stmt->bindParam(":tipologia", $this->Tipologia);
 		$stmt->bindParam(":quantita", $this->Quantita);
 
-    // execute the query
+    // execute query
     if($stmt->execute()){
         return true;
     }

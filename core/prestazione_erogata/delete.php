@@ -9,6 +9,7 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 $prestErogata = new PrestazioneErogata($db);
 $data = json_decode(file_get_contents("php://input"));
 
+// se inviato via json o via form
 if ($data != "") {
   if (!empty($data->Data) && !empty($data->Tipologia)) {
     $prestErogata->Data = $data->Data;

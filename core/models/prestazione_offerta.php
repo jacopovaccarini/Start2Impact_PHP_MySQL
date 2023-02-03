@@ -50,7 +50,7 @@ class PrestazioneOfferta {
 		$stmt->bindParam(":nome", $this->Nome);
     $stmt->bindParam(":tempo", $this->Tempo);
 
-    // execute the query
+    // execute query
     if($stmt->execute()){
         return true;
     }
