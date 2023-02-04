@@ -75,6 +75,9 @@
 * [MySQL](https://www.mysql.com/)
 * [HTML](https://html.spec.whatwg.org/)
 * [CSS](https://www.w3.org/TR/CSS/)
+* [Sass](https://sass-lang.com/)
+* [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript?retiredLocale=it)
+* [sweetalert2](https://sweetalert2.github.io/)
 
 <p align="right">(<a href="#top">torna all'inizio</a>)</p>
 
@@ -261,6 +264,8 @@ Collegamento al progetto: [https://progettophpmysql.jacopovaccarini.it/](https:/
 ## Ringraziamenti
 
 * [MySQL](https://www.mysql.com/)
+* [sweetalert2](https://sweetalert2.github.io/)
+* [Img Shields](https://shields.io)
 
 <p align="right">(<a href="#top">torna all'inizio</a>)</p>
 

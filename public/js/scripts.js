@@ -1,7 +1,16 @@
-function no_pe() {
+function nessuna_prestazione() {
   Swal.fire({ //messaggio avviso nessuna prestazione erogata
     title: "Nessuna Prestazione Erogata trovata in Bonny",
     icon: 'warning',
+    showCancelButton: false,
+    confirmButtonColor: "#22b14c"
+  });
+}
+
+function error_date() {
+  Swal.fire({ //messaggio avviso nessuna prestazione erogata
+    title: "La Data finale non può essere prima della Data iniziale",
+    icon: 'error',
     showCancelButton: false,
     confirmButtonColor: "#22b14c"
   });

@@ -76,7 +76,11 @@
     </div>
   <?php else : ?>
     <?php if ($_POST['submit'] == "date" || $_POST['submit'] == "type") : ?>
-      <script type="text/JavaScript">no_pe();</script>
+      <?php if ($errore == 1) : ?>
+        <script type="text/JavaScript">error_date();</script>
+      <?php else : ?>
+        <script type="text/JavaScript">nessuna_prestazione();</script>
+      <?php endif; ?>
     <?php endif; ?>
   <?php endif; ?>
 
