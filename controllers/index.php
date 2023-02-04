@@ -7,6 +7,7 @@ ini_set('log_errors', 1); // abilita il log degli errori.
 $prestOfferta = new PrestazioneOfferta($db);
 $offerte = $prestOfferta->read()->fetchAll(PDO::FETCH_CLASS);
 
+// tempo risparmiato
 $prestUnita = new PrestazioneUnita($db);
 $unite = $prestUnita->time_saved();
 $num = $unite->rowCount();

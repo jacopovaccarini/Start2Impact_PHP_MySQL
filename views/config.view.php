@@ -4,7 +4,7 @@
   <div class="principale">
     <div class="form_prestazione_offerta">
       <h1>Prestazione Offerta</h1>
-      <form method="post" action="/create_po">
+      <form method="post" action="/config">
         <div class="input_nome">
           <p>Nome</p>
           <input type="text" name="nome" size="20" required>
@@ -13,11 +13,11 @@
           <p>Tempo</p>
           <input type="number" name="tempo" size="40" required>
         </div>
-        <button type="submit" name="submit" value="Submit">Crea</button>
+        <button type="submit" name="submit" value="create_po">Crea</button>
       </form>
       <hr>
       <h1>Cancellazione</h1>
-      <form method="post" action="/delete_po">
+      <form method="post" action="/config">
         <div class="input_nome">
           <p>Nome</p>
           <select type="text" name="nome" required>
@@ -28,13 +28,13 @@
           <?php endforeach; ?>
           </select>
         </div>
-        <button type="submit" name="submit" value="Submit">Cancella</button>
+        <button type="submit" name="submit" value="delete_po">Cancella</button>
       </form>
     </div>
 
     <div class="form_prestazione_erogata">
       <h1>Prestazione Erogata</h1>
-      <form method="post" action="/create_pe">
+      <form method="post" action="/config">
         <div class="input_data">
           <p>Data</p>
           <input type="date" name="data" size="20" required>
@@ -53,11 +53,11 @@
           <p>Quantità</p>
           <input type="number" name="quantita" size="40" required>
         </div>
-        <button type="submit" name="submit" value="Submit">Crea</button>
+        <button type="submit" name="submit" value="create_pe">Crea</button>
       </form>
       <hr>
       <h1>Cancellazione</h1>
-      <form method="post" action="/delete_pe">
+      <form method="post" action="/config">
         <div class="input_data">
           <p>Data</p>
           <select type="text" name="data" required>
@@ -78,10 +78,21 @@
           <?php endforeach; ?>
           </select>
         </div>
-        <button type="submit" name="submit" value="Submit">Cancella</button>
+        <button type="submit" name="submit" value="delete_pe">Cancella</button>
       </form>
     </div>
   </div>
+
+  <?php if ($errore == 0) : ?>
+    <script type="text/JavaScript">success_create();</script>
+  <?php elseif ($errore == 1) : ?>
+    <script type="text/JavaScript">error_create();</script>
+  <?php elseif ($errore == 2) : ?>
+    <script type="text/JavaScript">success_delete();</script>
+  <?php elseif ($errore == 1) : ?>
+    <script type="text/JavaScript">error_delete();</script>
+  <?php endif; ?>
+
 </div>
 
 <?php require('partials/footer.php'); ?>

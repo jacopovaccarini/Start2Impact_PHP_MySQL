@@ -40,6 +40,7 @@
     </div>
   </div>
 
+  <!-- controlla se ci sono prestazioni erogate in quelle date o di quella tipologia -->
   <?php if ($somma != 0) : ?>
     <div class="secondario">
       <div class="table_ricerca">
@@ -73,7 +74,12 @@
         <p>Tempo risparmiato: <?= $somma; ?> minuti</p>
       </div>
     </div>
+  <?php else : ?>
+    <?php if ($_POST['submit'] == "date" || $_POST['submit'] == "type") : ?>
+      <script type="text/JavaScript">no_pe();</script>
+    <?php endif; ?>
   <?php endif; ?>
 
 </div>
+
 <?php require('partials/footer.php'); ?>
