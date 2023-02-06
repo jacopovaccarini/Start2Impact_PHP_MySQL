@@ -24,7 +24,7 @@
     <a href="https://github.com/jacopovaccarini/Start2Impact_PHP_MySQL"><strong>Esplora i documenti »</strong></a>
     <br />
     <br />
-    <a href="https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/">Visualizza demo</a>
+    <a href="https://progettophpmysql.jacopovaccarini.it/">Visualizza demo</a>
     ·
     <a href="https://github.com/jacopovaccarini/Start2Impact_PHP_MySQL/issues">Segnala un bug</a>
     ·
