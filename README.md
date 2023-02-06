@@ -115,7 +115,7 @@ Oppure utilizzando https://progettophpmysql.jacopovaccarini.it al posto di http:
 }
 </code>
 
-[![Schermata Postman][screenshot-updatepo]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+[![Schermata Postman][screenshot-updatepo]]
 
 
 <p>Per la CANCELLAZIONE di una nuova prestazione offerta deve essere utilizzato il seguente URL: http://localhost:8888/delete_po</p>
@@ -125,7 +125,7 @@ Oppure utilizzando https://progettophpmysql.jacopovaccarini.it al posto di http:
 }
 </code>
 
-[![Schermata Postman][screenshot-deletepo]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+[![Schermata Postman][screenshot-deletepo]]
 
 <p align="right">(<a href="#top">torna all'inizio</a>)</p>
 
@@ -141,7 +141,7 @@ Oppure utilizzando https://progettophpmysql.jacopovaccarini.it al posto di http:
 }
 </code>
 
-[![Schermata Postman][screenshot-createpe]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+[![Schermata Postman][screenshot-createpe]]
 
 
 <p>Per la MODIFICA di una nuova prestazione erogata deve essere utilizzato il seguente URL: http://localhost:8888/update_pe</p>
@@ -153,7 +153,7 @@ Oppure utilizzando https://progettophpmysql.jacopovaccarini.it al posto di http:
 }
 </code>
 
-[![Schermata Postman][screenshot-updatepe]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+[![Schermata Postman][screenshot-updatepe]]
 
 
 <p>Per la CANCELLAZIONE di una nuova prestazione erogata deve essere utilizzato il seguente URL: http://localhost:8888/delete_pe</p>
@@ -164,7 +164,7 @@ Oppure utilizzando https://progettophpmysql.jacopovaccarini.it al posto di http:
 }
 </code>
 
-[![Schermata Postman][screenshot-deletepe]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+[![Schermata Postman][screenshot-deletepe]]
 
 <p align="right">(<a href="#top">torna all'inizio</a>)</p>
 
@@ -180,7 +180,7 @@ Oppure utilizzando https://progettophpmysql.jacopovaccarini.it al posto di http:
 </code>
 <p>Come risposta avremo l’elenco delle prestazioni erogate con data tra Data_Iniziale e Data_Finale e il tempo risparmiato con quelle prestazioni erogate.</p>
 
-[![Schermata Postman][screenshot-filterdate]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+[![Schermata Postman][screenshot-filterdate]]
 
 
 <p>Per FILTRARE in base alla TIPOLOGIA delle prestazioni erogate deve essere utilizzato il seguente URL: http://localhost:8888/filter_type</p>
@@ -191,7 +191,7 @@ Oppure utilizzando https://progettophpmysql.jacopovaccarini.it al posto di http:
 </code>
 <p>Come risposta avremo l’elenco delle prestazioni erogate di quella tipologia e il tempo risparmiato con quelle prestazioni erogate.</p>
 
-[![Schermata Postman][screenshot-filtertype]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+[![Schermata Postman][screenshot-filtertype]]
 
 
 <p>Per FILTRARE in base alla DATA e alla TIPOLOGIA delle prestazioni erogate deve essere utilizzato il seguente URL: http://localhost:8888/filter_date_type</p>
@@ -204,14 +204,14 @@ Oppure utilizzando https://progettophpmysql.jacopovaccarini.it al posto di http:
 </code>
 <p>Come risposta avremo l’elenco delle prestazioni erogate di quella tipologia con data tra Data_Iniziale e Data_Finale e il tempo risparmiato con quelle prestazioni erogate.</p>
 
-[![Schermata Postman][screenshot-filterdatetype]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+[![Schermata Postman][screenshot-filterdatetype]]
 
 
 <p>Per visualizzare il TEMPO RISPARMIATO TOTALE delle prestazioni erogate deve essere utilizzato il seguente URL: http://localhost:8888/time_saved</p>
 <p>Con il Body vuoto</p>
 <p>Come risposta avremo direttamente il tempo risparmiato con tutte le prestazioni erogate.</p>
 
-[![Schermata Postman][screenshot-timesaved]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+[![Schermata Postman][screenshot-timesaved]]
 
 <p align="right">(<a href="#top">torna all'inizio</a>)</p>
 
@@ -224,17 +224,17 @@ Oppure utilizzando https://progettophpmysql.jacopovaccarini.it al posto di http:
 
 <p>Una principale «Dashboard» con riportato il tempo risparmiato totale di tutte le prestazioni erogate e la possibilità di filtrare per data e per tipologia.</p>
 
-[![Schermata applicazione][screenshot-progetto1]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
-[![Schermata applicazione][screenshot-progetto2]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
-[![Schermata applicazione][screenshot-progetto3]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+[![Schermata applicazione][screenshot-progetto1]](https://progettophpmysql.jacopovaccarini.it/)
+[![Schermata applicazione][screenshot-progetto2]](https://progettophpmysql.jacopovaccarini.it/)
+[![Schermata applicazione][screenshot-progetto3]](https://progettophpmysql.jacopovaccarini.it/)
 
 <p>Una secondaria «Tabelle» dove sono riportate le tabelle con le prestazioni offerte, erogate e una con l’unione tra le due tabelle.</p>
 
-[![Schermata applicazione][screenshot-progetto4]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+[![Schermata applicazione][screenshot-progetto4]](https://progettophpmysql.jacopovaccarini.it/)
 
 <p>Infine un’altra pagina secondaria «Configurazione» dove è possibile inserire e cancellare le prestazioni offerte ed erogate.</p>
 
-[![Schermata applicazione][screenshot-progetto5]](https://jacopovaccarini.github.io/Start2Impact_PHP_MySQL/)
+[![Schermata applicazione][screenshot-progetto5]](https://progettophpmysql.jacopovaccarini.it/)
 
 <p align="right">(<a href="#top">torna all'inizio</a>)</p>
 
