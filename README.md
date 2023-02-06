@@ -89,7 +89,7 @@
 <p>Le API progettate consentono l’inserimento, la modifica e la cancellazione di una tipologia di prestazione offerta e di prestazione erogata. Inoltre permettono la visualizzazione del tempo risparmiato e di filtrare per data e/o per tipologia di prestazione erogata.</p>
 
 <p>È possibile provarle ricostruendo il database con il file <a href="https://github.com/jacopovaccarini/Start2Impact_PHP_MySQL/blob/main/migrations.sql">migrations.sql</a>.
-Oppure utilizzando «https://progettophpmysql.jacopovaccarini.it» al posto di «http://localhost:8888» negli URL riportati sotto.</p>
+Oppure utilizzando «https://progettophpmysql.jacopovaccarini.it » al posto di «http://localhost:8888» negli URL riportati sotto.</p>
 
 <p align="right">(<a href="#top">torna all'inizio</a>)</p>
 
