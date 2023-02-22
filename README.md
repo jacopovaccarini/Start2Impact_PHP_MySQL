@@ -268,6 +268,7 @@ Collegamento al progetto: [https://progettophpmysql.jacopovaccarini.it/](https:/
 ## Ringraziamenti
 
 * [MySQL](https://www.mysql.com/)
+* [Composer](https://getcomposer.org/)
 * [sweetalert2](https://sweetalert2.github.io/)
 * [Img Shields](https://shields.io)
 
