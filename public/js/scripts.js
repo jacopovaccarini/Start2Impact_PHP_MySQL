@@ -1,5 +1,5 @@
 function nessuna_prestazione() {
-  Swal.fire({ //messaggio avviso nessuna prestazione erogata
+  Swal.fire({ // Messaggio avviso nessuna prestazione erogata
     title: "Nessuna Prestazione Erogata trovata in Bonny",
     icon: 'warning',
     showCancelButton: false,
@@ -8,7 +8,7 @@ function nessuna_prestazione() {
 }
 
 function error_date() {
-  Swal.fire({ //messaggio avviso nessuna prestazione erogata
+  Swal.fire({ // Messaggio avviso nessuna prestazione erogata
     title: "La Data finale non può essere prima della Data iniziale",
     icon: 'error',
     showCancelButton: false,
@@ -29,28 +29,28 @@ const Toast = Swal.mixin({
 });
 
 function success_create() {
-  Toast.fire({ //messaggio avviso prestazione creata
+  Toast.fire({ // Messaggio avviso prestazione creata
     icon: 'success',
     title: 'Prestazione creata correttamente'
   });
 }
 
 function success_delete() {
-  Toast.fire({ //messaggio avviso prestazione cancellata
+  Toast.fire({ // Messaggio avviso prestazione cancellata
     icon: 'success',
     title: 'Prestazione eliminata correttamente'
   });
 }
 
 function error_create() {
-  Toast.fire({ //messaggio errore prestazione non creata
+  Toast.fire({ // Messaggio errore prestazione non creata
     icon: 'error',
     title: 'Impossibile creare la prestazione'
   });
 }
 
 function error_delete() {
-  Toast.fire({ //messaggio errore prestazione non cancellata
+  Toast.fire({ // Messaggio errore prestazione non cancellata
     icon: 'error',
     title: 'Impossibile eliminare la prestazione'
   });

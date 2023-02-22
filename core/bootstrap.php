@@ -1,11 +1,21 @@
 <?php
 
-require 'core/Router.php';
-require 'core/Request.php';
-require 'core/database/database.php';
-require 'core/models/prestazione_offerta.php';
-require 'core/models/prestazione_erogata.php';
-require 'core/models/prestazione_unita.php';
+App::bind('config', require 'config.php');
 
-$database = new Database();
-$db = $database->getConnection();
+App::bind('database', new QueryBuilder(
+  Connection::make(App::get('config')['database'])
+));
+
+function view($name, $data = [])
+{
+  extract($data);
+
+  return require "views/{$name}.view.php";
+}
+
+function redirect($path)
+{
+  header("Location: /{$path}");
+}
+
+?>

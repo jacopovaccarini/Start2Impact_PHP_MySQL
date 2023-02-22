@@ -96,32 +96,33 @@ Oppure utilizzando https://progettophpmysql.jacopovaccarini.it al posto di http:
 
 ### API Prestazioni Offerte
 
-<p>Per l’INSERIMENTO di una nuova prestazione offerta deve essere utilizzato il seguente URL: http://localhost:8888/create_po</p>
+<p>Per l’INSERIMENTO di una nuova prestazione offerta deve essere utilizzato il seguente URL: http://localhost:8888/create_so</p>
 <p>Con il seguente Body in JSON:</p>
 <code>{
-    "Nome": "Bonus22",
-    "Tempo": 30
+    "Nome": "Bonus bicicletta",
+    "Tempo": 10
 }
 </code>
 
 ![Schermata Postman][screenshot-createpo]
 
 
-<p>Per la MODIFICA di una nuova prestazione offerta deve essere utilizzato il seguente URL: http://localhost:8888/update_po</p>
+<p>Per la MODIFICA di una nuova prestazione offerta deve essere utilizzato il seguente URL: http://localhost:8888/update_so</p>
 <p>Con il seguente Body in JSON:</p>
 <code>{
-    "Nome": "Bonus cultura",
-    "Tempo": 40
+    "id": 5,
+    "Nome": "Bonus bicicletta",
+    "Tempo": 20
 }
 </code>
 
 ![Schermata Postman][screenshot-updatepo]
 
 
-<p>Per la CANCELLAZIONE di una nuova prestazione offerta deve essere utilizzato il seguente URL: http://localhost:8888/delete_po</p>
+<p>Per la CANCELLAZIONE di una nuova prestazione offerta deve essere utilizzato il seguente URL: http://localhost:8888/delete_so</p>
 <p>Con il seguente Body in JSON:</p>
 <code>{
-    "Nome": "Bonus22 «
+    "id": 5
 }
 </code>
 
@@ -132,35 +133,35 @@ Oppure utilizzando https://progettophpmysql.jacopovaccarini.it al posto di http:
 
 ### API Prestazioni Erogate
 
-<p>Per l’INSERIMENTO di una nuova prestazione erogata deve essere utilizzato il seguente URL: http://localhost:8888/create_pe</p>
+<p>Per l’INSERIMENTO di una nuova prestazione erogata deve essere utilizzato il seguente URL: http://localhost:8888/create_sp</p>
 <p>Con il seguente Body in JSON:</p>
 <code>{
-    "Data": "2023-01-21",
-    "Tipologia": "Bonus20",
-    "Quantita": 2
+    "Data": "2022-11-18",
+    "Tipologia": "Bonus bicicletta",
+    "Quantita": 10
 }
 </code>
 
 ![Schermata Postman][screenshot-createpe]
 
 
-<p>Per la MODIFICA di una nuova prestazione erogata deve essere utilizzato il seguente URL: http://localhost:8888/update_pe</p>
+<p>Per la MODIFICA di una nuova prestazione erogata deve essere utilizzato il seguente URL: http://localhost:8888/update_sp</p>
 <p>Con il seguente Body in JSON:</p>
 <code>{
-    "Data": "2023-01-21",
-    "Tipologia": "Bonus20",
-    "Quantita": 2
+    "id": 6,
+    "Data": "2022-11-18",
+    "Tipologia": "Bonus bicicletta",
+    "Quantita": 15
 }
 </code>
 
 ![Schermata Postman][screenshot-updatepe]
 
 
-<p>Per la CANCELLAZIONE di una nuova prestazione erogata deve essere utilizzato il seguente URL: http://localhost:8888/delete_pe</p>
+<p>Per la CANCELLAZIONE di una nuova prestazione erogata deve essere utilizzato il seguente URL: http://localhost:8888/delete_sp</p>
 <p>Con il seguente Body in JSON:</p>
 <code>{
-    "Data": "2023-01-09",
-    "Tipologia": "Bonus cultura"
+    "id": 6
 }
 </code>
 
@@ -175,7 +176,7 @@ Oppure utilizzando https://progettophpmysql.jacopovaccarini.it al posto di http:
 <p>Con il seguente Body in JSON:</p>
 <code>{
     "Data_Iniziale": "2023-01-10",
-    "Data_Finale": "2023-01-21"
+    "Data_Finale": "2023-02-21"
 }
 </code>
 <p>Come risposta avremo l’elenco delle prestazioni erogate con data tra Data_Iniziale e Data_Finale e il tempo risparmiato con quelle prestazioni erogate.</p>
@@ -186,7 +187,7 @@ Oppure utilizzando https://progettophpmysql.jacopovaccarini.it al posto di http:
 <p>Per FILTRARE in base alla TIPOLOGIA delle prestazioni erogate deve essere utilizzato il seguente URL: http://localhost:8888/filter_type</p>
 <p>Con il seguente Body in JSON:</p>
 <code>{
-    "Tipologia": "Bonus10"
+    "Tipologia": "Bonus bicicletta"
 }
 </code>
 <p>Come risposta avremo l’elenco delle prestazioni erogate di quella tipologia e il tempo risparmiato con quelle prestazioni erogate.</p>
@@ -197,9 +198,9 @@ Oppure utilizzando https://progettophpmysql.jacopovaccarini.it al posto di http:
 <p>Per FILTRARE in base alla DATA e alla TIPOLOGIA delle prestazioni erogate deve essere utilizzato il seguente URL: http://localhost:8888/filter_date_type</p>
 <p>Con il seguente Body in JSON:</p>
 <code>{
-    "Data_Iniziale": "2023-01-19",
-    "Data_Finale": "2023-01-21",
-    "Tipologia": "Bonus20"
+    "Data_Iniziale": "2023-01-10",
+    "Data_Finale": "2023-02-21",
+    "Tipologia": "Bonus bicicletta"
 }
 </code>
 <p>Come risposta avremo l’elenco delle prestazioni erogate di quella tipologia con data tra Data_Iniziale e Data_Finale e il tempo risparmiato con quelle prestazioni erogate.</p>

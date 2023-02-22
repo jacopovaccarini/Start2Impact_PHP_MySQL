@@ -176,12 +176,20 @@ nav a:active {
   width: 100%;
 }
 
+.table_prestazioni_offerte .zero_colonna {
+  width: 10%;
+}
+
 .table_prestazioni_offerte .prima_colonna {
   width: 40%;
 }
 
 .table_prestazioni_offerte .seconda_colonna {
-  width: 60%;
+  width: 50%;
+}
+
+.table_prestazioni_erogate .zero_colonna {
+  width: 10%;
 }
 
 .table_prestazioni_erogate .prima_colonna {
@@ -189,11 +197,11 @@ nav a:active {
 }
 
 .table_prestazioni_erogate .seconda_colonna {
-  width: 40%;
+  width: 35%;
 }
 
 .table_prestazioni_erogate .terza_colonna {
-  width: 25%;
+  width: 20%;
 }
 
 .table_prestazioni_unite .prima_colonna {
@@ -318,7 +326,8 @@ form input, form select {
 .input_nome,
 .input_tempo,
 .input_data,
-.input_quantita {
+.input_quantita,
+.input_id {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -332,8 +341,13 @@ form input, form select {
 .input_nome p,
 .input_tempo p,
 .input_data p,
-.input_quantita p {
+.input_quantita p,
+.input_id p {
   padding-right: 1rem;
+}
+
+.input_id select {
+  margin: 1.2rem;
 }
 
 table {

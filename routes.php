@@ -1,19 +1,24 @@
 <?php
 
-$router->define([
-  '' => 'controllers/index.php',
-  'tables' => 'controllers/tables.php',
-  'config' => 'controllers/config.php',
-  'create_po' => 'core/prestazione_offerta/create.php',
-  'delete_po' => 'core/prestazione_offerta/delete.php',
-  'update_po' => 'core/prestazione_offerta/update.php',
-  'read_po' => 'core/prestazione_offerta/read.php',
-  'create_pe' => 'core/prestazione_erogata/create.php',
-  'delete_pe' => 'core/prestazione_erogata/delete.php',
-  'update_pe' => 'core/prestazione_erogata/update.php',
-  'read_pe' => 'core/prestazione_erogata/read.php',
-  'filter_date' => 'core/prestazione_unita/filter_date.php',
-  'filter_type' => 'core/prestazione_unita/filter_type.php',
-  'time_saved' => 'core/prestazione_unita/time_saved.php',
-  'filter_date_type' => 'core/prestazione_unita/filter_date_type.php'
-]);
+$router->get('', 'PagesController@dashboard');
+$router->post('', 'PagesController@dashboard');
+$router->get('tables', 'PagesController@tables');
+$router->get('config', 'PagesController@config');
+$router->post('config', 'PagesController@config');
+
+$router->post('create_so', 'ServicesController@create_so');
+$router->post('delete_so', 'ServicesController@delete_so');
+$router->post('update_so', 'ServicesController@update_so');
+$router->get('read_so', 'ServicesController@read_so');
+
+$router->post('create_sp', 'ServicesController@create_sp');
+$router->post('delete_sp', 'ServicesController@delete_sp');
+$router->post('update_sp', 'ServicesController@update_sp');
+$router->get('read_sp', 'ServicesController@read_sp');
+
+$router->get('filter_date', 'ServicesController@filter_date');
+$router->get('filter_type', 'ServicesController@filter_type');
+$router->get('filter_date_type', 'ServicesController@filter_date_type');
+$router->get('time_saved', 'ServicesController@time_saved');
+
+?>

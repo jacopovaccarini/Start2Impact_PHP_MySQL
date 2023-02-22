@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Gen 30, 2023 alle 16:12
+-- Creato il: Feb 22, 2023 alle 00:02
 -- Versione del server: 10.4.24-MariaDB
 -- Versione PHP: 8.1.6
 
@@ -80,8 +80,8 @@ INSERT INTO `prestazioni_offerte` (`id`, `Nome`, `Tempo`) VALUES
 (11, 'Bonus università', 15),
 (12, 'Bonus fotovoltaico', 35),
 (13, 'Bonus eolico', 65),
-(14, 'Bonus solare', 40),
-(15, 'Bonus giardino', 45);
+(14, 'Bonus giardino', 45),
+(15, 'Bonus solare', 30);
 
 --
 -- Indici per le tabelle scaricate
