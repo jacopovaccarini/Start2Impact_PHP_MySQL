@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Feb 22, 2023 alle 00:02
+-- Creato il: Feb 22, 2023 alle 17:24
 -- Versione del server: 10.4.24-MariaDB
 -- Versione PHP: 8.1.6
 
@@ -30,9 +30,9 @@ SET time_zone = "+00:00";
 CREATE TABLE `prestazioni_erogate` (
   `id` int(11) NOT NULL,
   `Data` date NOT NULL,
-  `Tipologia` text NOT NULL,
+  `Tipologia` text COLLATE utf8_unicode_ci NOT NULL,
   `Quantita` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dump dei dati per la tabella `prestazioni_erogate`
@@ -58,9 +58,9 @@ INSERT INTO `prestazioni_erogate` (`id`, `Data`, `Tipologia`, `Quantita`) VALUES
 
 CREATE TABLE `prestazioni_offerte` (
   `id` int(11) NOT NULL,
-  `Nome` text NOT NULL,
+  `Nome` text COLLATE utf8_unicode_ci NOT NULL,
   `Tempo` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dump dei dati per la tabella `prestazioni_offerte`
