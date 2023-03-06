@@ -1,4 +1,4 @@
 // ignora file .env
-
+.env
 // ignora cartella vendor
 vendor/
