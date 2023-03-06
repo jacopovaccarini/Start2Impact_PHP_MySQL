@@ -4,7 +4,9 @@ class Router
 {
   protected $routes = [
     'GET' => [],
-    'POST' => []
+    'POST' => [],
+    'PUT' => [],
+    'DELETE' => []
   ];
 
   public static function load($file)
@@ -24,6 +26,16 @@ class Router
   public function post($uri, $controller)
   {
     $this->routes['POST'][$uri] = $controller;
+  }
+
+  public function put($uri, $controller)
+  {
+    $this->routes['PUT'][$uri] = $controller;
+  }
+
+  public function delete($uri, $controller)
+  {
+    $this->routes['DELETE'][$uri] = $controller;
   }
 
   public function direct($uri, $requestType)

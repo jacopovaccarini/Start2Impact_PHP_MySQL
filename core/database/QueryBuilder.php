@@ -19,7 +19,7 @@ class QueryBuilder {
 
   // SELEZIONA tutte le righe delle tabelle unite
   public function selectJoin($table, $join) {
-    $query = "SELECT *, Tempo * Quantita AS Prodotto FROM {$table} INNER JOIN {$join} ON {$table}.Nome = {$join}.Tipologia ORDER BY Data ASC";
+    $query = "SELECT *, Time * Quantity AS Product FROM {$table} INNER JOIN {$join} ON {$table}.Name = {$join}.Typology ORDER BY Date ASC";
     $stmt = $this->pdo->prepare($query);
 
     $stmt->execute();
@@ -131,7 +131,7 @@ class QueryBuilder {
 
   // FILTRARE DATA Prestazione Unione
 	public function filter_date($table, $join, $initial_date, $final_date) {
-	  $query = "SELECT *, Tempo * Quantita AS Prodotto FROM {$table} INNER JOIN {$join} ON {$table}.Nome = {$join}.Tipologia WHERE Data BETWEEN :initial_date AND :final_date ORDER BY Data ASC";
+	  $query = "SELECT *, Time * Quantity AS Product FROM {$table} INNER JOIN {$join} ON {$table}.Name = {$join}.Typology WHERE Date BETWEEN :initial_date AND :final_date ORDER BY Date ASC";
 	  $stmt = $this->pdo->prepare($query);
     $initial_date = htmlspecialchars(strip_tags($initial_date));
     $final_date = htmlspecialchars(strip_tags($final_date));
@@ -147,7 +147,7 @@ class QueryBuilder {
 
 	// FILTRARE TIPOLOGIA Prestazione Unione
 	public function filter_type($table, $join, $type) {
-    $query = "SELECT *, Tempo * Quantita AS Prodotto FROM {$table} INNER JOIN {$join} ON {$table}.Nome = {$join}.Tipologia WHERE Tipologia = :type ORDER BY Data ASC";
+    $query = "SELECT *, Time * Quantity AS Product FROM {$table} INNER JOIN {$join} ON {$table}.Name = {$join}.Typology WHERE Typology = :type ORDER BY Date ASC";
 	  $stmt = $this->pdo->prepare($query);
     $type = htmlspecialchars(strip_tags($type));
 
@@ -159,7 +159,7 @@ class QueryBuilder {
 
   // FILTRARE DATA e TIPOLOGIA Prestazione Unione
 	function filter_date_type($table, $join, $initial_date, $final_date, $type) {
-	  $query = "SELECT *, Tempo * Quantita AS Prodotto FROM {$table} INNER JOIN {$join} ON {$table}.Nome = {$join}.Tipologia WHERE Data BETWEEN :initial_date AND :final_date AND Tipologia = :type ORDER BY Data ASC";
+	  $query = "SELECT *, Time * Quantity AS Product FROM {$table} INNER JOIN {$join} ON {$table}.Name = {$join}.Typology WHERE Date BETWEEN :initial_date AND :final_date AND Typology = :type ORDER BY Date ASC";
 	  $stmt = $this->pdo->prepare($query);
     $initial_date = htmlspecialchars(strip_tags($initial_date));
     $final_date = htmlspecialchars(strip_tags($final_date));

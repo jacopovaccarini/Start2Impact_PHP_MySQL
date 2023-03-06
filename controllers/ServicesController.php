@@ -12,55 +12,54 @@ class ServicesController {
       ])){
         // 201 creazione riuscita
         http_response_code(201);
-        echo json_encode(array("message" => "Prestazione offerta creata correttamente."));
+        echo json_encode(["message" => "Prestazione offerta creata correttamente."]);
       }else{
         // 503 servizio non disponibile
         http_response_code(503);
-        echo json_encode(array("message" => "Impossibile creare la prestazione offerta."));
+        echo json_encode(["message" => "Impossibile creare la prestazione offerta."]);
       }
     }else{
       // 400 richiesta non valida
       http_response_code(400);
-      echo json_encode(array("message" => "Impossibile creare la prestazione offerta perchè i dati sono incompleti."));
+      echo json_encode(["message" => "Impossibile creare la prestazione offerta perchè i dati sono incompleti."]);
     }
   }
 
-  public function delete_so() {
-    $data = json_decode(file_get_contents("php://input"));
-    if(!empty($data->id)) {
+  public function delete_so($id) {
+    if(!empty($id)) {
       if(App::get('database')->delete('prestazioni_offerte', [
-        'id' => $data->id
+        'id' => $id
       ])){
         // 200 stato OK
         http_response_code(200);
-        echo json_encode(array("message" => "La prestazione offerta e' stata eliminata"));
+        echo json_encode(["message" => "La prestazione offerta e' stata eliminata"]);
       }else{
         http_response_code(503);
-        echo json_encode(array("message" => "Impossibile eliminare la prestazione offerta."));
+        echo json_encode(["message" => "Impossibile eliminare la prestazione offerta."]);
       }
     }else{
       http_response_code(400);
-      echo json_encode(array("message" => "Impossibile cancellare la prestazione offerta perchè i dati sono incompleti."));
+      echo json_encode(["message" => "Impossibile cancellare la prestazione offerta perchè i dati sono incompleti."]);
     }
   }
 
-  public function update_so() {
+  public function update_so($id) {
     $data = json_decode(file_get_contents("php://input"));
-    if(!empty($data->id) && !empty($data->Nome) && !empty($data->Tempo)) {
+    if(!empty($id) && !empty($data->Nome) && !empty($data->Tempo)) {
       if(App::get('database')->update_so('prestazioni_offerte', [
-        'id' => $data->id,
+        'id' => $id,
         'Nome' => $data->Nome,
         'Tempo' => $data->Tempo
       ])){
         http_response_code(200);
-        echo json_encode(array("message" => "Prestazione offerta aggiornata."));
+        echo json_encode(["message" => "Prestazione offerta aggiornata."]);
       }else{
         http_response_code(503);
-        echo json_encode(array("message" => "Impossibile aggiornare la prestazione offerta."));
+        echo json_encode(["message" => "Impossibile aggiornare la prestazione offerta."]);
       }
     }else{
       http_response_code(400);
-      echo json_encode(array("message" => "Impossibile aggiornare la prestazione offerta perchè i dati sono incompleti."));
+      echo json_encode(["message" => "Impossibile aggiornare la prestazione offerta perchè i dati sono incompleti."]);
     }
   }
 
@@ -86,53 +85,52 @@ class ServicesController {
         'Quantita' => $data->Quantita
       ])){
         http_response_code(201);
-        echo json_encode(array("message" => "Prestazione erogata creata correttamente."));
+        echo json_encode(["message" => "Prestazione erogata creata correttamente."]);
       }else{
         http_response_code(503);
-        echo json_encode(array("message" => "Impossibile creare la prestazione erogata."));
+        echo json_encode(["message" => "Impossibile creare la prestazione erogata."]);
       }
     }else{
       http_response_code(400);
-      echo json_encode(array("message" => "Impossibile creare la prestazione erogata perchè i dati sono incompleti."));
+      echo json_encode(["message" => "Impossibile creare la prestazione erogata perchè i dati sono incompleti."]);
     }
   }
 
-  public function delete_sp() {
-    $data = json_decode(file_get_contents("php://input"));
-    if(!empty($data->id)) {
+  public function delete_sp($id) {
+    if(!empty($id)) {
       if(App::get('database')->delete('prestazioni_erogate', [
-        'id' => $data->id
+        'id' => $id
       ])){
         http_response_code(200);
-        echo json_encode(array("message" => "La prestazione erogata e' stata eliminata"));
+        echo json_encode(["message" => "La prestazione erogata e' stata eliminata"]);
       }else{
         http_response_code(503);
-        echo json_encode(array("message" => "Impossibile eliminare la prestazione erogata."));
+        echo json_encode(["message" => "Impossibile eliminare la prestazione erogata."]);
       }
     }else{
       http_response_code(400);
-      echo json_encode(array("message" => "Impossibile cancellare la prestazione erogata perchè i dati sono incompleti."));
+      echo json_encode(["message" => "Impossibile cancellare la prestazione erogata perchè i dati sono incompleti."]);
     }
   }
 
-  public function update_sp() {
+  public function update_sp($id) {
     $data = json_decode(file_get_contents("php://input"));
-    if(!empty($data->id) && !empty($data->Data) && !empty($data->Tipologia) && !empty($data->Quantita)) {
+    if(!empty($id) && !empty($data->Data) && !empty($data->Tipologia) && !empty($data->Quantita)) {
       if(App::get('database')->update_sp('prestazioni_erogate', [
-        'id' => $data->id,
+        'id' => $id,
         'Data' => $data->Data,
         'Tipologia' => $data->Tipologia,
         'Quantita' => $data->Quantita
       ])){
         http_response_code(200);
-        echo json_encode(array("message" => "Prestazione erogata aggiornata."));
+        echo json_encode(["message" => "Prestazione erogata aggiornata."]);
       }else{
         http_response_code(503);
-        echo json_encode(array("message" => "Impossibile aggiornare la prestazione erogata."));
+        echo json_encode(["message" => "Impossibile aggiornare la prestazione erogata."]);
       }
     }else{
       http_response_code(400);
-      echo json_encode(array("message" => "Impossibile aggiornare la prestazione erogata perchè i dati sono incompleti."));
+      echo json_encode(["message" => "Impossibile aggiornare la prestazione erogata perchè i dati sono incompleti."]);
     }
   }
 
@@ -159,7 +157,7 @@ class ServicesController {
           foreach ($search as $search_item) {
             $total_timeSaved += $search_item->Prodotto;
           }
-          array_push($search, array("Tempo_risparmiato" => $total_timeSaved));
+          array_push($search, ["Tempo_risparmiato" => $total_timeSaved]);
           http_response_code(200);
           echo json_encode($search);
         } else {
@@ -167,11 +165,11 @@ class ServicesController {
         }
       } else {
         http_response_code(400);
-        echo json_encode(array("message" => "Impossibile filtrare la Prestazione Erogata perchè la data finale è prima della data iniziale."));
+        echo json_encode(["message" => "Impossibile filtrare la Prestazione Erogata perchè la data finale è prima della data iniziale."]);
       }
     } else {
       http_response_code(400);
-      echo json_encode(array("message" => "Impossibile filtrare la Prestazione Erogata perchè i dati sono incompleti."));
+      echo json_encode(["message" => "Impossibile filtrare la Prestazione Erogata perchè i dati sono incompleti."]);
     }
   }
 
@@ -185,7 +183,7 @@ class ServicesController {
         foreach ($search as $search_item) {
           $total_timeSaved += $search_item->Prodotto;
         }
-        array_push($search, array("Tempo_risparmiato" => $total_timeSaved));
+        array_push($search, ["Tempo_risparmiato" => $total_timeSaved]);
         http_response_code(200);
         echo json_encode($search);
       } else {
@@ -193,7 +191,7 @@ class ServicesController {
       }
     } else {
       http_response_code(400);
-      echo json_encode(array("message" => "Impossibile filtrare la Prestazione Erogata perchè i dati sono incompleti."));
+      echo json_encode(["message" => "Impossibile filtrare la Prestazione Erogata perchè i dati sono incompleti."]);
     }
   }
 
@@ -208,7 +206,7 @@ class ServicesController {
           foreach ($search as $search_item) {
             $total_timeSaved += $search_item->Prodotto;
           }
-          array_push($search, array("Tempo_risparmiato" => $total_timeSaved));
+          array_push($search, ["Tempo_risparmiato" => $total_timeSaved]);
           http_response_code(200);
           echo json_encode($search);
         } else {
@@ -216,11 +214,11 @@ class ServicesController {
         }
       } else {
         http_response_code(400);
-        echo json_encode(array("message" => "Impossibile filtrare la Prestazione Erogata perchè la data finale è prima della data iniziale."));
+        echo json_encode(["message" => "Impossibile filtrare la Prestazione Erogata perchè la data finale è prima della data iniziale."]);
       }
     } else {
       http_response_code(400);
-      echo json_encode(array("message" => "Impossibile filtrare la Prestazione Erogata perchè i dati sono incompleti."));
+      echo json_encode(["message" => "Impossibile filtrare la Prestazione Erogata perchè i dati sono incompleti."]);
     }
   }
 
@@ -233,7 +231,7 @@ class ServicesController {
         $total_timeSaved += $value->Prodotto;
       }
       http_response_code(200);
-      echo json_encode(array("Tempo_risparmiato_totale" => $total_timeSaved));
+      echo json_encode(["Tempo_risparmiato_totale" => $total_timeSaved]);
     } else {
       http_response_code(204);
     }

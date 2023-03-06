@@ -10,14 +10,14 @@ class PagesController {
   public function dashboard() {
 
     // Tempo risparmiato totale
-    $values = App::get('database')->selectJoin('prestazioni_offerte', 'prestazioni_erogate');
+    $values = App::get('database')->selectJoin('services_offered', 'services_provided');
     $total_timeSaved = 0;
     foreach ($values as $value) {
-      $total_timeSaved += $value->Prodotto;
+      $total_timeSaved += $value->Product;
     }
 
     // Prestazioni offerte per ricerca tipologia
-    $offered = App::get('database')->selectAll('prestazioni_offerte');
+    $offered = App::get('database')->selectAll('services_offered');
 
     // Ricerca per data e per tipologia
     $initial_date = '';
@@ -32,16 +32,16 @@ class PagesController {
       if ($final_date < $initial_date) {
         $error = 1;
       } else {
-        $search = App::get('database')->filter_date('prestazioni_offerte', 'prestazioni_erogate', $initial_date, $final_date);
+        $search = App::get('database')->filter_date('services_offered', 'services_provided', $initial_date, $final_date);
       }
     } else if ($_POST['submit'] == "filter_type") {
       $type = $_POST['type'];
-      $search = App::get('database')->filter_type('prestazioni_offerte', 'prestazioni_erogate', $type);
+      $search = App::get('database')->filter_type('services_offered', 'services_provided', $type);
     }
 
     // Tempo risparmiato parziale (in base alla ricerca)
     foreach ($search as $search_item) {
-      $timeSaved += $search_item->Prodotto;
+      $timeSaved += $search_item->Product;
     }
 
     return view('index', compact('total_timeSaved', 'offered', 'initial_date', 'final_date', 'type', 'timeSaved', 'error', 'search'));
@@ -49,9 +49,9 @@ class PagesController {
 
   // Pagina secondaria TABELLE
   public function tables() {
-    $offered = App::get('database')->selectAll('prestazioni_offerte');
-    $provided = App::get('database')->selectAll('prestazioni_erogate');
-    $joint = App::get('database')->selectJoin('prestazioni_offerte', 'prestazioni_erogate');
+    $offered = App::get('database')->selectAll('services_offered');
+    $provided = App::get('database')->selectAll('services_provided');
+    $joint = App::get('database')->selectJoin('services_offered', 'services_provided');
 
     return view('tables', compact('offered', 'provided', 'joint'));
   }
@@ -60,18 +60,18 @@ class PagesController {
   public function config() {
 
     // Prestazioni offerte per cancellazione e per inserimento tipologia prest. erogate
-    $offered = App::get('database')->selectAll('prestazioni_offerte');
+    $offered = App::get('database')->selectAll('services_offered');
 
     // Prestazioni erogate per cancellazione
-    $provided = App::get('database')->selectAll('prestazioni_erogate');
+    $provided = App::get('database')->selectAll('services_provided');
 
     // Inserimento e cancellazione prestazioni
     $error = '';
 
     if ($_POST['submit'] == "create_so") {
-      if (App::get('database')->insert('prestazioni_offerte', [
-        'Nome' => $_POST['name'],
-        'Tempo' => $_POST['time']
+      if (App::get('database')->insert('services_offered', [
+        'Name' => $_POST['name'],
+        'Time' => $_POST['time']
       ])){
         // 201 creazione riuscita
         http_response_code(201);
@@ -83,7 +83,7 @@ class PagesController {
       }
     } else if ($_POST['submit'] == "delete_so") {
       $id = explode("-", $_POST['offered']);
-      if (App::get('database')->delete('prestazioni_offerte', [
+      if (App::get('database')->delete('services_offered', [
         'id' => $id[0]
       ])){
         // 200 stato OK
@@ -94,10 +94,10 @@ class PagesController {
         $error = 3; // errore eliminazione
       }
     } else if ($_POST['submit'] == "create_sp") {
-      if (App::get('database')->insert('prestazioni_erogate', [
-        'Data' => $_POST['date'],
-        'Tipologia' => $_POST['type'],
-        'Quantita' => $_POST['quantity']
+      if (App::get('database')->insert('services_provided', [
+        'Date' => $_POST['date'],
+        'Typology' => $_POST['type'],
+        'Quantity' => $_POST['quantity']
       ])){
         http_response_code(201);
         $error = 0; // creato con successo
@@ -107,7 +107,7 @@ class PagesController {
       }
     } else if ($_POST['submit'] == "delete_sp") {
       $id = explode("-", $_POST['provided']);
-      if (App::get('database')->delete('prestazioni_erogate', [
+      if (App::get('database')->delete('services_provided', [
         'id' => $id[0]
       ])){
         http_response_code(200);

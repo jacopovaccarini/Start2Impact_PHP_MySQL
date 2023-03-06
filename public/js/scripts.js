@@ -1,6 +1,6 @@
 function nessuna_prestazione() {
   Swal.fire({ // Messaggio avviso nessuna prestazione erogata
-    title: "Nessuna Prestazione Erogata trovata in Bonny",
+    title: "No Services Provided found in Bonny",
     icon: 'warning',
     showCancelButton: false,
     confirmButtonColor: "#22b14c"
@@ -9,7 +9,7 @@ function nessuna_prestazione() {
 
 function error_date() {
   Swal.fire({ // Messaggio avviso nessuna prestazione erogata
-    title: "La Data finale non può essere prima della Data iniziale",
+    title: "The Final date cannot be before the Initial date",
     icon: 'error',
     showCancelButton: false,
     confirmButtonColor: "#22b14c"
@@ -31,27 +31,27 @@ const Toast = Swal.mixin({
 function success_create() {
   Toast.fire({ // Messaggio avviso prestazione creata
     icon: 'success',
-    title: 'Prestazione creata correttamente'
+    title: 'Service created successfully'
   });
 }
 
 function success_delete() {
   Toast.fire({ // Messaggio avviso prestazione cancellata
     icon: 'success',
-    title: 'Prestazione eliminata correttamente'
+    title: 'Service deleted successfully'
   });
 }
 
 function error_create() {
   Toast.fire({ // Messaggio errore prestazione non creata
     icon: 'error',
-    title: 'Impossibile creare la prestazione'
+    title: 'Unable to create service'
   });
 }
 
 function error_delete() {
   Toast.fire({ // Messaggio errore prestazione non cancellata
     icon: 'error',
-    title: 'Impossibile eliminare la prestazione'
+    title: 'Unable to delete service'
   });
 }
