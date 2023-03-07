@@ -72,11 +72,11 @@ class PagesController {
       if (App::get('database')->insert('services_offered', [
         'Name' => $_POST['name'],
         'Time' => $_POST['time']
-      ])){
+      ])) {
         // 201 creazione riuscita
         http_response_code(201);
         $error = 0; // creato con successo
-      }else{
+      } else {
         // 503 servizio non disponibile
         http_response_code(503);
         $error = 1; // errore creazione
@@ -85,11 +85,11 @@ class PagesController {
       $id = explode("-", $_POST['offered']);
       if (App::get('database')->delete('services_offered', [
         'id' => $id[0]
-      ])){
+      ])) {
         // 200 stato OK
         http_response_code(200);
         $error = 2; // eliminato con successo
-      }else{
+      } else {
         http_response_code(503);
         $error = 3; // errore eliminazione
       }
@@ -98,10 +98,10 @@ class PagesController {
         'Date' => $_POST['date'],
         'Typology' => $_POST['type'],
         'Quantity' => $_POST['quantity']
-      ])){
+      ])) {
         http_response_code(201);
         $error = 0; // creato con successo
-      }else{
+      } else {
         http_response_code(503);
         $error = 1; // errore creazione
       }
@@ -109,10 +109,10 @@ class PagesController {
       $id = explode("-", $_POST['provided']);
       if (App::get('database')->delete('services_provided', [
         'id' => $id[0]
-      ])){
+      ])) {
         http_response_code(200);
         $error = 2; // eliminato con successo
-      }else{
+      } else {
         http_response_code(503);
         $error = 3; // errore eliminazione
       }

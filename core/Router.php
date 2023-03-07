@@ -40,26 +40,32 @@ class Router
 
   public function direct($uri, $requestType)
   {
-    if (array_key_exists($uri, $this->routes[$requestType])) {
+    $url = $uri[0];
+    if(isset($uri[1])) {
+      $id = $uri[1];
+    }else{
+      $id = null;
+    }
+    if(array_key_exists($url, $this->routes[$requestType])) {
       return $this->callAction(
-        ...explode('@', $this->routes[$requestType][$uri])
+        $id,
+        ...explode('@', $this->routes[$requestType][$url])
       );
     }
-
     throw new Exception('No route defined for this URI.');
   }
 
-  protected function callAction($controller, $action)
+  protected function callAction($id, $controller, $action)
   {
     $controller = new $controller;
 
-    if (! method_exists($controller, $action)) {
-        throw new Exception(
-          "{$controller} does not respond to the {$action} action."
-        );
+    if(!method_exists($controller, $action)) {
+      throw new Exception(
+        "{$controller} does not respond to the {$action} action."
+      );
     }
 
-    return $controller->$action();
+    return $controller->$action($id);
   }
 }
 
