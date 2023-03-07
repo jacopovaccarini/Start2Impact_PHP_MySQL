@@ -48,85 +48,136 @@ class QueryBuilder {
 
   // MODIFICA Prestazione Offerta
   public function update_so($table, $parameters) {
-    $query = sprintf(
-      'update %s set %s = %s, %s = %s where %s = %s',
-      $table,
-      array_keys($parameters)[1],
-      ':' . array_keys($parameters)[1],
-      array_keys($parameters)[2],
-      ':' . array_keys($parameters)[2],
-      array_keys($parameters)[0],
-      ':' . array_keys($parameters)[0]
-    );
-
-    try {
-      $stmt = $this->pdo->prepare($query);
-      $stmt->execute($parameters);
-    } catch(Exception $e) {
-      die($e.'Whoops, something went wrong');
-      return false;
-    }
-
-    return true;
-  }
-
-  // MODIFICA Prestazione Erogata
-  public function update_sp($table, $parameters) {
-    $query = sprintf(
-      'update %s set %s = %s, %s = %s, %s = %s where %s = %s',
-      $table,
-      array_keys($parameters)[1],
-      ':' . array_keys($parameters)[1],
-      array_keys($parameters)[2],
-      ':' . array_keys($parameters)[2],
-      array_keys($parameters)[3],
-      ':' . array_keys($parameters)[3],
-      array_keys($parameters)[0],
-      ':' . array_keys($parameters)[0]
-    );
-
-    try {
-      $stmt = $this->pdo->prepare($query);
-      $stmt->execute($parameters);
-    } catch(Exception $e) {
-      die($e.'Whoops, something went wrong');
-      return false;
-    }
-
-    return true;
-  }
-
-  // CANCELLAZIONE Prestazione
-  public function delete($table, $parameters) {
-    $query = sprintf(
-      'delete from %s where %s = %s',
-      $table,
-      implode (', ', array_keys($parameters)),
-      ':' . implode (', :', array_keys($parameters)),
-    );
-
-    try {
-      $stmt = $this->pdo->prepare($query);
-      $stmt->execute($parameters);
-    } catch(Exception $e) {
-      die($e.'Whoops, something went wrong');
-      return false;
-    }
-
-    // Reset degli ID
-    $query = "SET @num := 0;
-      UPDATE {$table} SET id = @num := (@num+1);
-      ALTER TABLE {$table} AUTO_INCREMENT =1";
+    // Ricerca ID massimo
+    $query = "SELECT max(id) AS max FROM {$table}";
 
     try {
       $stmt = $this->pdo->prepare($query);
       $stmt->execute();
+      $max_id = $stmt->fetch(PDO::FETCH_ASSOC);
     } catch(Exception $e) {
       die($e.'Whoops, something went wrong');
       return false;
     }
 
-    return true;
+    // Verifica esistenza ID
+    if ($parameters['id'] <= $max_id['max']) {
+      $query = sprintf(
+        'update %s set %s = %s, %s = %s where %s = %s',
+        $table,
+        array_keys($parameters)[1],
+        ':' . array_keys($parameters)[1],
+        array_keys($parameters)[2],
+        ':' . array_keys($parameters)[2],
+        array_keys($parameters)[0],
+        ':' . array_keys($parameters)[0]
+      );
+
+      try {
+        $stmt = $this->pdo->prepare($query);
+        $stmt->execute($parameters);
+      } catch(Exception $e) {
+        die($e.'Whoops, something went wrong');
+        return false;
+      }
+
+      return true;
+    }
+
+    return false;
+  }
+
+  // MODIFICA Prestazione Erogata
+  public function update_sp($table, $parameters) {
+    // Ricerca ID massimo
+    $query = "SELECT max(id) AS max FROM {$table}";
+
+    try {
+      $stmt = $this->pdo->prepare($query);
+      $stmt->execute();
+      $max_id = $stmt->fetch(PDO::FETCH_ASSOC);
+    } catch(Exception $e) {
+      die($e.'Whoops, something went wrong');
+      return false;
+    }
+
+    // Verifica esistenza ID
+    if ($parameters['id'] <= $max_id['max']) {
+      $query = sprintf(
+        'update %s set %s = %s, %s = %s, %s = %s where %s = %s',
+        $table,
+        array_keys($parameters)[1],
+        ':' . array_keys($parameters)[1],
+        array_keys($parameters)[2],
+        ':' . array_keys($parameters)[2],
+        array_keys($parameters)[3],
+        ':' . array_keys($parameters)[3],
+        array_keys($parameters)[0],
+        ':' . array_keys($parameters)[0]
+      );
+
+      try {
+        $stmt = $this->pdo->prepare($query);
+        $stmt->execute($parameters);
+      } catch(Exception $e) {
+        die($e.'Whoops, something went wrong');
+        return false;
+      }
+
+      return true;
+    }
+
+    return false;
+  }
+
+  // CANCELLAZIONE Prestazione
+  public function delete($table, $parameters) {
+    // Ricerca ID massimo
+    $query = "SELECT max(id) AS max FROM {$table}";
+
+    try {
+      $stmt = $this->pdo->prepare($query);
+      $stmt->execute();
+      $max_id = $stmt->fetch(PDO::FETCH_ASSOC);
+    } catch(Exception $e) {
+      die($e.'Whoops, something went wrong');
+      return false;
+    }
+
+    // Verifica esistenza ID
+    if ($parameters['id'] <= $max_id['max']) {
+      $query = sprintf(
+        'delete from %s where %s = %s',
+        $table,
+        implode (', ', array_keys($parameters)),
+        ':' . implode (', :', array_keys($parameters)),
+      );
+
+      try {
+        $stmt = $this->pdo->prepare($query);
+        $stmt->execute($parameters);
+      } catch(Exception $e) {
+        die($e.'Whoops, something went wrong');
+        return false;
+      }
+
+      // Reset degli ID
+      $query = "SET @num := 0;
+        UPDATE {$table} SET id = @num := (@num+1);
+        ALTER TABLE {$table} AUTO_INCREMENT =1";
+
+      try {
+        $stmt = $this->pdo->prepare($query);
+        $stmt->execute();
+      } catch(Exception $e) {
+        die($e.'Whoops, something went wrong');
+        return false;
+      }
+
+      return true;
+    }
+
+    return false;
   }
 
   // FILTRARE DATA Prestazione Unione

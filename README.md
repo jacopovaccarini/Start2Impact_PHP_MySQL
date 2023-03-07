@@ -96,35 +96,30 @@ Oppure utilizzando https://progettophpmysql.jacopovaccarini.it al posto di http:
 
 ### API Prestazioni Offerte
 
-<p>Per l’INSERIMENTO di una nuova prestazione offerta deve essere utilizzato il seguente URL: http://localhost:8888/create_so</p>
+<p>Per l’INSERIMENTO di una nuova prestazione offerta deve essere utilizzato il metodo POST e il seguente URL: http://localhost:8888/services_offered</p>
 <p>Con il seguente Body in JSON:</p>
 <code>{
-    "Nome": "Bonus bicicletta",
-    "Tempo": 10
+    "Name": "Bike bonus",
+    "Time": 10
 }
 </code>
 
 ![Schermata Postman][screenshot-createpo]
 
 
-<p>Per la MODIFICA di una nuova prestazione offerta deve essere utilizzato il seguente URL: http://localhost:8888/update_so</p>
+<p>Per la MODIFICA di una prestazione offerta deve essere utilizzato il metodo PUT e il seguente URL: http://localhost:8888/services_offered/{id}</p>
 <p>Con il seguente Body in JSON:</p>
 <code>{
-    "id": 5,
-    "Nome": "Bonus bicicletta",
-    "Tempo": 20
+    "Name": "Bike bonus",
+    "Time": 20
 }
 </code>
 
 ![Schermata Postman][screenshot-updatepo]
 
 
-<p>Per la CANCELLAZIONE di una nuova prestazione offerta deve essere utilizzato il seguente URL: http://localhost:8888/delete_so</p>
-<p>Con il seguente Body in JSON:</p>
-<code>{
-    "id": 5
-}
-</code>
+<p>Per la CANCELLAZIONE di una prestazione offerta deve essere utilizzato il metodo DELETE e il seguente URL: http://localhost:8888/services_offered/{id}</p>
+<p>Con il Body vuoto</p>
 
 ![Schermata Postman][screenshot-deletepo]
 
@@ -133,37 +128,32 @@ Oppure utilizzando https://progettophpmysql.jacopovaccarini.it al posto di http:
 
 ### API Prestazioni Erogate
 
-<p>Per l’INSERIMENTO di una nuova prestazione erogata deve essere utilizzato il seguente URL: http://localhost:8888/create_sp</p>
+<p>Per l’INSERIMENTO di una nuova prestazione erogata deve essere utilizzato il metodo POST e il seguente URL: http://localhost:8888/services_provided</p>
 <p>Con il seguente Body in JSON:</p>
 <code>{
-    "Data": "2022-11-18",
-    "Tipologia": "Bonus bicicletta",
-    "Quantita": 10
+    "Date": "2022-11-18",
+    "Typology": "Bike bonus",
+    "Quantity": 10
 }
 </code>
 
 ![Schermata Postman][screenshot-createpe]
 
 
-<p>Per la MODIFICA di una nuova prestazione erogata deve essere utilizzato il seguente URL: http://localhost:8888/update_sp</p>
+<p>Per la MODIFICA di una prestazione erogata deve essere utilizzato il metodo PUT e il seguente URL: http://localhost:8888/services_provided/{id}</p>
 <p>Con il seguente Body in JSON:</p>
 <code>{
-    "id": 6,
-    "Data": "2022-11-18",
-    "Tipologia": "Bonus bicicletta",
-    "Quantita": 15
+    "Date": "2022-11-18",
+    "Typology": "Bike bonus",
+    "Quantity": 15
 }
 </code>
 
 ![Schermata Postman][screenshot-updatepe]
 
 
-<p>Per la CANCELLAZIONE di una nuova prestazione erogata deve essere utilizzato il seguente URL: http://localhost:8888/delete_sp</p>
-<p>Con il seguente Body in JSON:</p>
-<code>{
-    "id": 6
-}
-</code>
+<p>Per la CANCELLAZIONE di una prestazione erogata deve essere utilizzato il seguente URL: http://localhost:8888/services_provided/{id}</p>
+<p>Con il Body vuoto</p>
 
 ![Schermata Postman][screenshot-deletepe]
 
@@ -172,43 +162,25 @@ Oppure utilizzando https://progettophpmysql.jacopovaccarini.it al posto di http:
 
 ### Altre API
 
-<p>Per FILTRARE in base alla DATA delle prestazioni erogate deve essere utilizzato il seguente URL: http://localhost:8888/filter_date</p>
-<p>Con il seguente Body in JSON:</p>
-<code>{
-    "Data_Iniziale": "2023-01-10",
-    "Data_Finale": "2023-02-21"
-}
-</code>
+<p>Per FILTRARE in base alla DATA delle prestazioni erogate deve essere utilizzato il metodo GET e il seguente URL: http://localhost:8888/services_provided?filters[initial_date]=2023-01-01&filters[final_date]=2023-03-07</p>
 <p>Come risposta avremo l’elenco delle prestazioni erogate con data tra Data_Iniziale e Data_Finale e il tempo risparmiato con quelle prestazioni erogate.</p>
 
 ![Schermata Postman][screenshot-filterdate]
 
 
-<p>Per FILTRARE in base alla TIPOLOGIA delle prestazioni erogate deve essere utilizzato il seguente URL: http://localhost:8888/filter_type</p>
-<p>Con il seguente Body in JSON:</p>
-<code>{
-    "Tipologia": "Bonus bicicletta"
-}
-</code>
+<p>Per FILTRARE in base alla TIPOLOGIA delle prestazioni erogate deve essere utilizzato il metodo GET e il seguente URL: http://localhost:8888/services_provided?filters[type]=Bike bonus</p>
 <p>Come risposta avremo l’elenco delle prestazioni erogate di quella tipologia e il tempo risparmiato con quelle prestazioni erogate.</p>
 
 ![Schermata Postman][screenshot-filtertype]
 
 
-<p>Per FILTRARE in base alla DATA e alla TIPOLOGIA delle prestazioni erogate deve essere utilizzato il seguente URL: http://localhost:8888/filter_date_type</p>
-<p>Con il seguente Body in JSON:</p>
-<code>{
-    "Data_Iniziale": "2023-01-10",
-    "Data_Finale": "2023-02-21",
-    "Tipologia": "Bonus bicicletta"
-}
-</code>
+<p>Per FILTRARE in base alla DATA e alla TIPOLOGIA delle prestazioni erogate deve essere utilizzato il metodo GET e il seguente URL: http://localhost:8888/services_provided?filters[initial_date]=2023-01-01&filters[final_date]=2023-03-07&filters[type]=Bike bonus</p>
 <p>Come risposta avremo l’elenco delle prestazioni erogate di quella tipologia con data tra Data_Iniziale e Data_Finale e il tempo risparmiato con quelle prestazioni erogate.</p>
 
 ![Schermata Postman][screenshot-filterdatetype]
 
 
-<p>Per visualizzare il TEMPO RISPARMIATO TOTALE delle prestazioni erogate deve essere utilizzato il seguente URL: http://localhost:8888/time_saved</p>
+<p>Per visualizzare il TEMPO RISPARMIATO TOTALE delle prestazioni erogate deve essere utilizzato il metodo GET e il seguente URL: http://localhost:8888/time_saved</p>
 <p>Con il Body vuoto</p>
 <p>Come risposta avremo direttamente il tempo risparmiato con tutte le prestazioni erogate.</p>
 
@@ -269,6 +241,7 @@ Collegamento al progetto: [https://progettophpmysql.jacopovaccarini.it/](https:/
 
 * [MySQL](https://www.mysql.com/)
 * [Composer](https://getcomposer.org/)
+* [PHP dotenv](https://github.com/vlucas/phpdotenv)
 * [sweetalert2](https://sweetalert2.github.io/)
 * [Img Shields](https://shields.io)
 
