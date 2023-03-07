@@ -130,13 +130,13 @@ class ServicesController {
 
   public function update_sp($id) {
     $data = json_decode(file_get_contents("php://input"));
-    if (!empty($id) && !empty($data->Data) && !empty($data->Tipologia) && !empty($data->Quantita)) {
+    if (!empty($id) && !empty($data->Date) && !empty($data->Typology) && !empty($data->Quantity)) {
       if (is_numeric($id)) {
         if (App::get('database')->update_sp('services_provided', [
           'id' => $id,
-          'Data' => $data->Data,
-          'Tipologia' => $data->Tipologia,
-          'Quantita' => $data->Quantita
+          'Date' => $data->Date,
+          'Typology' => $data->Typology,
+          'Quantity' => $data->Quantity
         ])) {
           http_response_code(200);
           echo json_encode(["message" => "The service provided has been updated."]);
