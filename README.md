@@ -108,6 +108,7 @@ Oppure utilizzando https://progettophpmysql.jacopovaccarini.it al posto di http:
 
 
 <p>Per la MODIFICA di una prestazione offerta deve essere utilizzato il metodo PUT e il seguente URL: http://localhost:8888/services_offered/{id}</p>
+<p>Dove {id} è l'ID della prestazione offerta che si vuole modificare</p>
 <p>Con il seguente Body in JSON:</p>
 <code>{
     "Name": "Bike bonus",
@@ -119,6 +120,7 @@ Oppure utilizzando https://progettophpmysql.jacopovaccarini.it al posto di http:
 
 
 <p>Per la CANCELLAZIONE di una prestazione offerta deve essere utilizzato il metodo DELETE e il seguente URL: http://localhost:8888/services_offered/{id}</p>
+<p>Dove {id} è l'ID della prestazione offerta che si vuole cancellare</p>
 <p>Con il Body vuoto</p>
 
 ![Schermata Postman][screenshot-deletepo]
@@ -141,6 +143,7 @@ Oppure utilizzando https://progettophpmysql.jacopovaccarini.it al posto di http:
 
 
 <p>Per la MODIFICA di una prestazione erogata deve essere utilizzato il metodo PUT e il seguente URL: http://localhost:8888/services_provided/{id}</p>
+<p>Dove {id} è l'ID della prestazione erogata che si vuole modificare</p>
 <p>Con il seguente Body in JSON:</p>
 <code>{
     "Date": "2022-11-18",
@@ -153,6 +156,7 @@ Oppure utilizzando https://progettophpmysql.jacopovaccarini.it al posto di http:
 
 
 <p>Per la CANCELLAZIONE di una prestazione erogata deve essere utilizzato il seguente URL: http://localhost:8888/services_provided/{id}</p>
+<p>Dove {id} è l'ID della prestazione erogata che si vuole cancellare</p>
 <p>Con il Body vuoto</p>
 
 ![Schermata Postman][screenshot-deletepe]
@@ -163,19 +167,19 @@ Oppure utilizzando https://progettophpmysql.jacopovaccarini.it al posto di http:
 ### Altre API
 
 <p>Per FILTRARE in base alla DATA delle prestazioni erogate deve essere utilizzato il metodo GET e il seguente URL: http://localhost:8888/services_provided?filters[initial_date]=2023-01-01&filters[final_date]=2023-03-07</p>
-<p>Come risposta avremo l’elenco delle prestazioni erogate con data tra Data_Iniziale e Data_Finale e il tempo risparmiato con quelle prestazioni erogate.</p>
+<p>Come risposta avremo l’elenco delle prestazioni erogate con data tra filters[initial_date] e filters[final_date] e il tempo risparmiato con quelle prestazioni erogate.</p>
 
 ![Schermata Postman][screenshot-filterdate]
 
 
 <p>Per FILTRARE in base alla TIPOLOGIA delle prestazioni erogate deve essere utilizzato il metodo GET e il seguente URL: http://localhost:8888/services_provided?filters[type]=Bike bonus</p>
-<p>Come risposta avremo l’elenco delle prestazioni erogate di quella tipologia e il tempo risparmiato con quelle prestazioni erogate.</p>
+<p>Come risposta avremo l’elenco delle prestazioni erogate della tipologia in filters[type] e il tempo risparmiato con quelle prestazioni erogate.</p>
 
 ![Schermata Postman][screenshot-filtertype]
 
 
 <p>Per FILTRARE in base alla DATA e alla TIPOLOGIA delle prestazioni erogate deve essere utilizzato il metodo GET e il seguente URL: http://localhost:8888/services_provided?filters[initial_date]=2023-01-01&filters[final_date]=2023-03-07&filters[type]=Bike bonus</p>
-<p>Come risposta avremo l’elenco delle prestazioni erogate di quella tipologia con data tra Data_Iniziale e Data_Finale e il tempo risparmiato con quelle prestazioni erogate.</p>
+<p>Come risposta avremo l’elenco delle prestazioni erogate della tipologia in filters[type] con data tra filters[initial_date] e filters[final_date] e il tempo risparmiato con quelle prestazioni erogate.</p>
 
 ![Schermata Postman][screenshot-filterdatetype]
 
