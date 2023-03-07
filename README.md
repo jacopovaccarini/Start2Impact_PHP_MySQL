@@ -205,11 +205,11 @@ Oppure utilizzando https://progettophpmysql.jacopovaccarini.it al posto di http:
 [![Schermata applicazione][screenshot-progetto2]](https://progettophpmysql.jacopovaccarini.it/)
 [![Schermata applicazione][screenshot-progetto3]](https://progettophpmysql.jacopovaccarini.it/)
 
-<p>Una secondaria «Tabelle» dove sono riportate le tabelle con le prestazioni offerte, erogate e una con l’unione tra le due tabelle.</p>
+<p>Una secondaria «Tables» dove sono riportate le tabelle con le prestazioni offerte, erogate e una con l’unione tra le due tabelle.</p>
 
 [![Schermata applicazione][screenshot-progetto4]](https://progettophpmysql.jacopovaccarini.it/tables)
 
-<p>Infine un’altra pagina secondaria «Configurazione» dove è possibile inserire e cancellare le prestazioni offerte ed erogate.</p>
+<p>Infine un’altra pagina secondaria «Configuration» dove è possibile inserire e cancellare le prestazioni offerte ed erogate.</p>
 
 [![Schermata applicazione][screenshot-progetto5]](https://progettophpmysql.jacopovaccarini.it/config)
 
