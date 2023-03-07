@@ -173,13 +173,13 @@ Oppure utilizzando https://progettophpmysql.jacopovaccarini.it al posto di http:
 
 
 <p>Per FILTRARE in base alla TIPOLOGIA delle prestazioni erogate deve essere utilizzato il metodo GET e il seguente URL: http://localhost:8888/services_provided?filters[type]=Bike bonus</p>
-<p>Come risposta avremo l’elenco delle prestazioni erogate della tipologia in filters[type] e il tempo risparmiato con quelle prestazioni erogate.</p>
+<p>Come risposta avremo l’elenco delle prestazioni erogate della tipologia filters[type] e il tempo risparmiato con quelle prestazioni erogate.</p>
 
 ![Schermata Postman][screenshot-filtertype]
 
 
 <p>Per FILTRARE in base alla DATA e alla TIPOLOGIA delle prestazioni erogate deve essere utilizzato il metodo GET e il seguente URL: http://localhost:8888/services_provided?filters[initial_date]=2023-01-01&filters[final_date]=2023-03-07&filters[type]=Bike bonus</p>
-<p>Come risposta avremo l’elenco delle prestazioni erogate della tipologia in filters[type] con data tra filters[initial_date] e filters[final_date] e il tempo risparmiato con quelle prestazioni erogate.</p>
+<p>Come risposta avremo l’elenco delle prestazioni erogate della tipologia filters[type] con data tra filters[initial_date] e filters[final_date] e il tempo risparmiato con quelle prestazioni erogate.</p>
 
 ![Schermata Postman][screenshot-filterdatetype]
 
